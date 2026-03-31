@@ -398,6 +398,53 @@ section { padding: 100px 0; }
 .s-bg-gold-pale .area-name { color: var(--on-white-primary); }
 .s-bg-gold-pale .area-dot { background: var(--gold-dk); }
 
+/* ── About / pillar text on light backgrounds ── */
+.s-bg-gold-pale p,
+.s-bg-white p { color: var(--on-white-muted); }
+
+.s-bg-gold-pale .about-highlight,
+.s-bg-white .about-highlight {
+  background: rgba(26,51,38,0.06);
+  border-left-color: var(--forest);
+  color: var(--forest);
+}
+
+.s-bg-gold-pale .pillar-title,
+.s-bg-white .pillar-title { color: var(--forest); }
+
+.s-bg-gold-pale .pillar-body,
+.s-bg-white .pillar-body { color: var(--on-white-muted); }
+
+.s-bg-gold-pale .pillar-num,
+.s-bg-white .pillar-num { color: var(--gold-dk); }
+
+.s-bg-gold-pale .pillar,
+.s-bg-white .pillar { border-bottom-color: rgba(26,51,38,0.1); }
+
+/* Inline style overrides — force text dark on light sections */
+.s-bg-gold-pale [style*="color:var(--dim)"],
+.s-bg-gold-pale [style*="color: var(--dim)"] { color: var(--on-white-muted) !important; }
+
+.s-bg-gold-pale [style*="color:var(--cream)"],
+.s-bg-gold-pale [style*="color: var(--cream)"] { color: var(--forest) !important; }
+
+/* Section title inline overrides */
+.s-bg-gold-pale [style*="color:var(--white)"],
+.s-bg-gold-pale [style*="color:#fff"],
+.s-bg-gold-pale [style*="color: #fff"] { color: var(--forest) !important; }
+
+/* About content paragraphs — the about section inline text */
+.s-bg-gold-pale .about-content > p,
+.s-bg-gold-pale .about-content > * { color: var(--on-white-muted); }
+
+/* FAQ on gold-pale */
+.s-bg-gold-pale .faq-q { color: var(--forest); }
+.s-bg-gold-pale .faq-q:hover { color: var(--gold-dk); }
+.s-bg-gold-pale .faq-item { border-bottom-color: rgba(26,51,38,0.1); }
+.s-bg-gold-pale .faq-a { color: var(--on-white-muted); }
+.s-bg-gold-pale .faq-arrow { background: rgba(26,51,38,0.08); color: var(--forest); }
+.s-bg-gold-pale .faq-item.open .faq-arrow { background: var(--gold-dk); color: #fff; }
+
 /* Legacy aliases */
 .s-bg-forest { background: var(--bg-green); color: var(--on-green-primary); }
 .s-bg-ink { background: var(--ink); color: var(--cream); }
@@ -953,7 +1000,7 @@ footer .btn { border-radius: 100px !important; }
     <div class="s-header">
       <div>
         <p class="label reveal">What We Do</p>
-        <h2 class="s-title reveal rd1">Our<br><span class="g">Services</span></h2>
+        <h2 class="s-title reveal rd1" style="color:var(--forest);">Our<br><span style="color:var(--lime-dk)">Services</span></h2>
       </div>
       <p class="s-body reveal rd2">From initial design to ongoing maintenance, we handle every detail so your property looks exceptional year-round. Residential and commercial, no job too big or small.</p>
     </div>
@@ -983,9 +1030,9 @@ footer .btn { border-radius: 100px !important; }
       </div>
       <div>
         <p class="label reveal">Our Story</p>
-        <h2 class="s-title reveal rd1" style="font-size:clamp(2.5rem,5vw,5rem);margin-bottom:22px;">Family Built.<br><span class="g">Community</span><br><span class="gd">Driven.</span></h2>
-        <p style="font-size:1rem;font-weight:300;color:var(--dim);line-height:1.8;margin-bottom:14px;" class="reveal rd2">DGO Green was founded by our father with a vision to serve the community. A decade later, we've grown into a full-service landscaping operation — but the philosophy stays the same: treat every property like it's ours.</p>
-        <p style="font-size:1rem;font-weight:300;color:var(--dim);line-height:1.8;" class="reveal rd2">We don't lowball and cut corners. We show you what's actually needed and deliver it right the first time. No hidden fees, no surprise charges on invoice day.</p>
+        <h2 class="s-title reveal rd1" style="font-size:clamp(2.5rem,5vw,5rem);margin-bottom:22px;color:var(--forest);">Family Built.<br><span style="color:var(--forest)">Community</span><br><span style="color:var(--gold-dk)">Driven.</span></h2>
+        <p style="font-size:1rem;font-weight:300;color:var(--on-white-muted);line-height:1.8;margin-bottom:14px;" class="reveal rd2">DGO Green was founded by our father with a vision to serve the community. A decade later, we've grown into a full-service landscaping operation — but the philosophy stays the same: treat every property like it's ours.</p>
+        <p style="font-size:1rem;font-weight:300;color:var(--on-white-muted);line-height:1.8;" class="reveal rd2">We don't lowball and cut corners. We show you what's actually needed and deliver it right the first time. No hidden fees, no surprise charges on invoice day.</p>
         <blockquote class="about-highlight reveal rd3">"From concept to final walkthrough, DGO Green made the entire process easy. Our yard looks better than we ever thought possible." — Maria T., Everett</blockquote>
         <div class="pillars reveal rd4">
           <div class="pillar"><div class="pillar-num">01</div><div><div class="pillar-title">Expert Execution</div><p class="pillar-body">Specialized experience in both landscaping and hardscaping. Every job gets our full attention, start to finish.</p></div></div>
@@ -1018,7 +1065,7 @@ footer .btn { border-radius: 100px !important; }
     <div class="process-grid">
       <div>
         <p class="label reveal" style="margin-bottom:16px;">How It Works</p>
-        <h2 class="s-title reveal rd1" style="font-size:clamp(2.5rem,5vw,5rem);margin-bottom:48px;">From First Call to <span class="gd">Final Walkthrough</span></h2>
+        <h2 class="s-title reveal rd1" style="font-size:clamp(2.5rem,5vw,5rem);margin-bottom:48px;color:var(--forest);">From First Call to <span style="color:var(--gold-dk)">Final Walkthrough</span></h2>
         <div class="timeline">
           <div class="tl-item reveal">
             <div class="tl-marker"><div class="tl-dot">01</div><div class="tl-line"></div></div>
@@ -1089,8 +1136,8 @@ footer .btn { border-radius: 100px !important; }
     <div class="faq-grid">
       <div>
         <p class="label reveal" style="margin-bottom:16px;">Got Questions</p>
-        <h2 class="s-title reveal rd1" style="font-size:clamp(2.5rem,5vw,5rem);margin-bottom:18px;">FAQ</h2>
-        <p style="font-size:1rem;font-weight:300;color:var(--dim);line-height:1.8;margin-bottom:2rem;" class="reveal rd2">Straight answers. No runaround. Still have questions? Just reach out.</p>
+        <h2 class="s-title reveal rd1" style="font-size:clamp(2.5rem,5vw,5rem);margin-bottom:18px;color:var(--forest);">FAQ</h2>
+        <p style="font-size:1rem;font-weight:300;color:var(--on-white-muted);line-height:1.8;margin-bottom:2rem;" class="reveal rd2">Straight answers. No runaround. Still have questions? Just reach out.</p>
         <div class="reveal rd3"><a href="#contact" class="btn btn-gold">Ask Us Anything →</a></div>
       </div>
       <div class="faq-list reveal rd2">
@@ -1125,7 +1172,7 @@ footer .btn { border-radius: 100px !important; }
   <div class="container">
     <div style="margin-bottom:56px;">
       <p class="label reveal" style="margin-bottom:16px;">Reach Out</p>
-      <h2 class="s-title reveal rd1">Get In<br><span class="g">Touch</span></h2>
+      <h2 class="s-title reveal rd1" style="color:var(--forest);">Get In<br><span style="color:var(--lime-dk)">Touch</span></h2>
     </div>
     <div class="contact-grid">
       <div class="contact-form-box reveal">

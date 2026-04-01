@@ -840,6 +840,299 @@ footer .btn { border-radius: 100px !important; }
   .stat-item { border-bottom: 1px solid rgba(0,0,0,0.12) !important; }
   .stat-item:last-child { border-bottom: none !important; }
 }
+/* ─── HALF-ROUNDED BUTTONS (pill left, sharp right) ─── */
+.btn {
+  border-radius: 100px 8px 8px 100px !important;
+}
+/* Flip for secondary/outline variants */
+.btn-outline, .btn-outline-gold {
+  border-radius: 8px 100px 100px 8px !important;
+}
+/* Full pill for floating CTA and call btn */
+.floating-cta .btn,
+.cpc-call-btn {
+  border-radius: 100px !important;
+}
+
+/* ─── CARD GLOW HOVER EFFECT ─── */
+.svc-photo-card {
+  position: relative;
+  isolation: isolate;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.svc-photo-card::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--glow-angle, 0deg),
+    transparent 0%,
+    var(--lime) 10%,
+    var(--gold) 30%,
+    transparent 40%,
+    transparent 60%,
+    var(--lime) 70%,
+    transparent 80%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+  filter: blur(8px);
+}
+.svc-photo-card:hover::after {
+  opacity: 0.6;
+  animation: glow-spin 3s linear infinite;
+}
+.svc-photo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(142,207,134,0.2);
+}
+@keyframes glow-spin {
+  to { --glow-angle: 360deg; }
+}
+@property --glow-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+/* ─── PHOTO SERVICE CARDS ─── */
+.svc-photo-card {
+  background: var(--forest) !important;
+  border-radius: 20px !important;
+  overflow: hidden;
+  padding: 0 !important;
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: default;
+  border: none !important;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+}
+.svc-photo-bg {
+  position: absolute;
+  inset: 0;
+  background-image: var(--svc-img);
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s ease;
+  z-index: 0;
+}
+.svc-photo-card:hover .svc-photo-bg {
+  transform: scale(1.06);
+}
+.svc-photo-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10,22,15,0.95) 0%, rgba(10,22,15,0.6) 45%, transparent 100%);
+  z-index: 1;
+  height: auto !important;
+  width: auto !important;
+  border-radius: 0 !important;
+  background-color: transparent !important;
+  transition: none !important;
+}
+.svc-photo-badge {
+  position: absolute;
+  top: 16px; left: 16px;
+  z-index: 3;
+  background: var(--gold);
+  color: var(--ink);
+  font-family: 'Syne', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 100px;
+}
+.svc-photo-content {
+  position: relative;
+  z-index: 2;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.svc-icon-svg {
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.15);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--lime);
+  margin-bottom: 4px;
+  flex-shrink: 0;
+}
+.svc-photo-card .svc-name {
+  color: #fff !important;
+  font-size: 1.1rem;
+}
+.svc-photo-card .svc-desc {
+  color: rgba(255,255,255,0.65) !important;
+  font-size: 0.84rem;
+  line-height: 1.65;
+}
+.svc-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-decoration: none;
+  transition: gap 0.2s, color 0.2s;
+  width: fit-content;
+}
+.svc-link-btn:hover { gap: 10px; color: var(--gold-lt); }
+
+/* ─── CONTACT PROFILE CARD ─── */
+.contact-profile-card {
+  background: #fff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 4px 40px rgba(26,51,38,0.1);
+  border: 1px solid rgba(26,51,38,0.08);
+}
+.cpc-header {
+  background: var(--forest);
+  padding: 28px 28px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.cpc-avatar {
+  width: 64px; height: 64px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid rgba(255,255,255,0.15);
+  flex-shrink: 0;
+  background: var(--pine);
+  display: flex; align-items: center; justify-content: center;
+}
+.cpc-avatar img { width: 100%; height: 100%; object-fit: contain; padding: 6px; }
+.cpc-status {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.65);
+}
+.cpc-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--lime);
+  animation: pulse 2s infinite;
+  flex-shrink: 0;
+}
+.cpc-blocks {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.cpc-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(26,51,38,0.07);
+  transition: background 0.2s;
+}
+.cpc-block:last-child { border-bottom: none; }
+.cpc-block-icon {
+  width: 34px; height: 34px;
+  border-radius: 10px;
+  background: rgba(26,51,38,0.06);
+  border: 1px solid rgba(26,51,38,0.08);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--forest);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.cpc-block-label {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-dk);
+  margin-bottom: 3px;
+}
+.cpc-block-val {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--forest);
+  line-height: 1.55;
+}
+.cpc-block-val a { color: var(--forest); transition: color 0.2s; }
+.cpc-block-val a:hover { color: var(--gold-dk); }
+.cpc-call-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 24px 24px;
+  padding: 14px;
+  background: var(--lime);
+  color: var(--ink);
+  border-radius: 100px !important;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.cpc-call-btn:hover { background: var(--lime-dk); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(142,207,134,0.4); }
+
+/* ─── FOOTER MAP ─── */
+.footer-map-wrap {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+}
+#footerMap {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(30%) brightness(0.85);
+}
+.footer-map-pin {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--forest);
+  color: var(--lime);
+  font-family: 'Syne', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 8px 18px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  z-index: 500;
+  white-space: nowrap;
+}
+
+/* Fix spam note color on white bg */
+.s-bg-white .contact-spam-note { color: var(--on-white-muted) !important; }
 </style>
 </head>
 <body>
@@ -1002,15 +1295,88 @@ footer .btn { border-radius: 100px !important; }
         <p class="label reveal">What We Do</p>
         <h2 class="s-title reveal rd1" style="color:var(--forest);">Our<br><span style="color:var(--lime-dk)">Services</span></h2>
       </div>
-      <p class="s-body reveal rd2">From initial design to ongoing maintenance, we handle every detail so your property looks exceptional year-round. Residential and commercial, no job too big or small.</p>
+      <p class="s-body reveal rd2">We specialize in hardscaping, fencing, and paving — the projects that add real lasting value to your property. Plus full landscaping and maintenance to keep everything looking sharp.</p>
     </div>
     <div class="services-grid">
-      <div class="svc-card reveal"><span class="svc-num">01</span><div class="svc-icon">🌿</div><div class="svc-name">Landscape Design</div><p class="svc-desc">Concept to completed plan. Functional, beautiful yards that blend your vision with what actually works on your property.</p><a href="#contact" class="svc-link">Get Quote →</a></div>
-      <div class="svc-card reveal rd1"><span class="svc-num">02</span><div class="svc-icon">✂️</div><div class="svc-name">Lawn Care &amp; Maintenance</div><p class="svc-desc">Mowing, edging, fertilization, aeration, and seasonal clean-ups. Weekly and bi-weekly plans available year-round.</p><a href="#contact" class="svc-link">Get Quote →</a></div>
-      <div class="svc-card reveal rd2"><span class="svc-num">03</span><div class="svc-icon">🪨</div><div class="svc-name">Hardscaping</div><p class="svc-desc">Pavers, patios, walkways, retaining walls, and outdoor living areas. Built to last through every WA winter.</p><a href="#contact" class="svc-link">Get Quote →</a></div>
-      <div class="svc-card reveal"><span class="svc-num">04</span><div class="svc-icon">🌳</div><div class="svc-name">Tree &amp; Shrub Care</div><p class="svc-desc">Pruning, shaping, planting, health checks, and removals. We keep your plantings healthy, not just trimmed.</p><a href="#contact" class="svc-link">Get Quote →</a></div>
-      <div class="svc-card reveal rd1"><span class="svc-num">05</span><div class="svc-icon">💧</div><div class="svc-name">Irrigation Systems</div><p class="svc-desc">Smart watering systems designed to keep your lawn green and your water bill low. Install, repair, and tune-ups.</p><a href="#contact" class="svc-link">Get Quote →</a></div>
-      <div class="svc-card reveal rd2"><span class="svc-num">06</span><div class="svc-icon">💡</div><div class="svc-name">Landscape Lighting</div><p class="svc-desc">Path, accent, and security lighting that extends your outdoor time and dramatically improves curb appeal.</p><a href="#contact" class="svc-link">Get Quote →</a></div>
+      <div class="svc-card svc-photo-card reveal" style="--svc-img:url('https://github.com/user-attachments/assets/4054fd5c-9861-4989-95e6-6708443fbfeb')">
+        <div class="svc-photo-bg"></div>
+        <div class="svc-photo-badge">Featured</div>
+        <div class="svc-photo-content">
+          <div class="svc-icon-svg">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <div class="svc-name">Hardscaping</div>
+          <p class="svc-desc">Pavers, patios, retaining walls, walkways, and outdoor living areas. Built to handle every WA winter and look great for decades.</p>
+          <a href="#contact" class="svc-link-btn">Get Quote
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="svc-card svc-photo-card reveal rd1" style="--svc-img:url('https://github.com/user-attachments/assets/48b98fcf-cde9-48ba-9932-e83c4b620b5f')">
+        <div class="svc-photo-bg"></div>
+        <div class="svc-photo-content">
+          <div class="svc-icon-svg">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div class="svc-name">Landscape Design</div>
+          <p class="svc-desc">From concept to full plan. We design functional, beautiful yards that work with your property, not against it.</p>
+          <a href="#contact" class="svc-link-btn">Get Quote
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="svc-card svc-photo-card reveal rd2" style="--svc-img:url('https://github.com/user-attachments/assets/76434f50-5e05-4c3a-a0fa-a3e1753c519a')">
+        <div class="svc-photo-bg"></div>
+        <div class="svc-photo-content">
+          <div class="svc-icon-svg">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12"/><path d="M5 3a7 7 0 0 0 7 7 7 7 0 0 0 7-7"/><path d="M5 11a7 7 0 0 0 7 7 7 7 0 0 0 7-7"/><path d="M3 21h18"/></svg>
+          </div>
+          <div class="svc-name">Lawn Care &amp; Maintenance</div>
+          <p class="svc-desc">Mowing, edging, fertilization, aeration, seasonal clean-ups. Weekly and bi-weekly plans available year-round.</p>
+          <a href="#contact" class="svc-link-btn">Get Quote
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="svc-card svc-photo-card reveal" style="--svc-img:url('https://github.com/user-attachments/assets/730ec146-da20-4021-a476-710eae936a6b')">
+        <div class="svc-photo-bg"></div>
+        <div class="svc-photo-content">
+          <div class="svc-icon-svg">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8C8 10 5.9 16.17 3.82 22"/><path d="M9.5 8c1 4 4 7 9 8"/></svg>
+          </div>
+          <div class="svc-name">Tree &amp; Shrub Care</div>
+          <p class="svc-desc">Pruning, shaping, planting, and removals. We keep your trees and shrubs healthy and your yard looking intentional.</p>
+          <a href="#contact" class="svc-link-btn">Get Quote
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="svc-card svc-photo-card reveal rd1" style="--svc-img:url('https://github.com/user-attachments/assets/aedd944c-961e-4a47-a675-032c9ff2963e')">
+        <div class="svc-photo-bg"></div>
+        <div class="svc-photo-content">
+          <div class="svc-icon-svg">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20z"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <div class="svc-name">Irrigation Systems</div>
+          <p class="svc-desc">Smart watering design, install, and tune-ups. Keep your lawn green and your water bill low all season.</p>
+          <a href="#contact" class="svc-link-btn">Get Quote
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="svc-card svc-photo-card reveal rd2" style="--svc-img:url('https://github.com/user-attachments/assets/db3f6811-4055-45cb-ba4f-655d40054f89')">
+        <div class="svc-photo-bg"></div>
+        <div class="svc-photo-content">
+          <div class="svc-icon-svg">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          </div>
+          <div class="svc-name">Landscape Lighting</div>
+          <p class="svc-desc">Path, accent, and security lighting that extends your outdoor time and makes your property stand out at night.</p>
+          <a href="#contact" class="svc-link-btn">Get Quote
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1207,37 +1573,81 @@ footer .btn { border-radius: 100px !important; }
           </div>
           <button type="submit" class="btn btn-gold" style="margin-top:4px">Send My Request →</button>
           <div id="contactSuccess" style="display:none;margin-top:12px;font-family:'Syne',sans-serif;font-size:0.82rem;font-weight:600;color:var(--lime);letter-spacing:0.06em;">Message sent! We'll be in touch same day.</div>
-          <p style="margin-top:10px;font-size:0.7rem;color:rgba(255,255,255,0.18);">No spam. We respond same day.</p>
+          <p class="contact-spam-note" style="margin-top:10px;font-size:0.7rem;color:var(--on-white-muted);">No spam. We respond same day.</p>
         </form>
       </div>
       <div class="contact-info reveal rd2">
-        <div class="info-block">
-          <div class="info-block-label">Phone</div>
-          <div class="info-block-val"><a href="tel:+14254564640">(425) 456-4640</a></div>
+        <!-- Profile-style contact card -->
+        <div class="contact-profile-card">
+          <div class="cpc-header">
+            <div class="cpc-avatar">
+              <img src="https://github.com/user-attachments/assets/da443841-6952-4642-9083-924ba550798c" alt="DGO Green" />
+            </div>
+            <div class="cpc-status">
+              <span class="cpc-dot"></span>
+              <span>Available for new projects</span>
+            </div>
+          </div>
+          <div class="cpc-blocks">
+            <div class="cpc-block">
+              <div class="cpc-block-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.37a16 16 0 0 0 5.72 5.72l1.37-1.37a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <div class="cpc-block-label">Phone</div>
+                <div class="cpc-block-val"><a href="tel:+14254564640">(425) 456-4640</a></div>
+              </div>
+            </div>
+            <div class="cpc-block">
+              <div class="cpc-block-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <div class="cpc-block-label">Service Area</div>
+                <div class="cpc-block-val">Snohomish County &amp; surrounding<br><span style="opacity:0.7;font-size:0.85em">Everett · Bothell · Lynnwood · Mill Creek<br>Marysville · Monroe · Lake Stevens</span></div>
+              </div>
+            </div>
+            <div class="cpc-block">
+              <div class="cpc-block-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <div class="cpc-block-label">Business Hours</div>
+                <div class="cpc-block-val">Mon–Fri: 7am – 6pm<br>Saturday: 8am – 4pm<br>Sunday: Closed</div>
+              </div>
+            </div>
+            <div class="cpc-block">
+              <div class="cpc-block-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              </div>
+              <div>
+                <div class="cpc-block-label">Response Time</div>
+                <div class="cpc-block-val">Within 24 hours. Urgent? Call us directly.</div>
+              </div>
+            </div>
+          </div>
+          <a href="tel:+14254564640" class="cpc-call-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.37a16 16 0 0 0 5.72 5.72l1.37-1.37a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call Us Now
+          </a>
         </div>
-        <div class="info-block">
-          <div class="info-block-label">Service Area</div>
-          <div class="info-block-val">Snohomish County and surrounding areas<br>Everett, Bothell, Lynnwood, Mill Creek,<br>Marysville, Monroe, Lake Stevens</div>
-        </div>
-        <div class="info-block">
-          <div class="info-block-label">Business Hours</div>
-          <div class="info-block-val">Monday to Friday: 7am to 6pm<br>Saturday: 8am to 4pm<br>Sunday: Closed</div>
-        </div>
-        <div class="info-block">
-          <div class="info-block-label">Response Time</div>
-          <div class="info-block-val">We respond to all inquiries within 24 hours. For urgent requests, call us directly.</div>
-        </div>
-        <a href="tel:+14254564640" class="btn btn-lime" style="justify-self:start;margin-top:0.5rem">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.37a16 16 0 0 0 5.72 5.72l1.37-1.37a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          Call Us Now
-        </a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ─── FOOTER ─── -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <footer>
+  <!-- Map strip -->
+  <div class="footer-map-wrap">
+    <div id="footerMap"></div>
+    <div class="footer-map-pin">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Serving Everett, WA &amp; Snohomish County
+    </div>
+  </div>
   <div class="container">
     <div class="footer-grid">
       <div>
@@ -1261,9 +1671,9 @@ footer .btn { border-radius: 100px !important; }
       <div>
         <div class="footer-col-title">Services</div>
         <ul class="footer-links">
+          <li><a href="#services">Hardscaping</a></li>
           <li><a href="#services">Landscape Design</a></li>
           <li><a href="#services">Lawn Maintenance</a></li>
-          <li><a href="#services">Hardscaping</a></li>
           <li><a href="#services">Tree &amp; Shrub Care</a></li>
           <li><a href="#services">Irrigation</a></li>
           <li><a href="#services">Lighting</a></li>
@@ -1312,7 +1722,37 @@ footer .btn { border-radius: 100px !important; }
   }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-  // FAQ
+  // Leaflet map — Everett WA
+  function initMap() {
+    if (!document.getElementById('footerMap')) return;
+    const map = L.map('footerMap', {
+      center: [47.9790, -122.2021],
+      zoom: 12,
+      zoomControl: false,
+      scrollWheelZoom: false,
+      dragging: false,
+      touchZoom: false,
+      doubleClickZoom: false
+    });
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap'
+    }).addTo(map);
+    const greenIcon = L.divIcon({
+      className: '',
+      html: `<div style="width:36px;height:36px;background:#1a3326;border:3px solid #8ecf86;border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 4px 16px rgba(0,0,0,0.4)"></div>`,
+      iconSize: [36, 36],
+      iconAnchor: [18, 36]
+    });
+    L.marker([47.9790, -122.2021], { icon: greenIcon })
+      .addTo(map)
+      .bindPopup('<b style="font-family:sans-serif;color:#1a3326">DGO Green Landscaping</b><br><span style="font-size:12px">Everett, WA — Snohomish County</span>')
+      .openPopup();
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMap);
+  } else {
+    setTimeout(initMap, 100);
+  }
   function toggleFaq(btn) {
     const item = btn.closest('.faq-item');
     const isOpen = item.classList.contains('open');

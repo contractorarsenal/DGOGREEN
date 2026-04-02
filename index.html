@@ -6,80 +6,51 @@
 <title>DGO Green Landscaping | Snohomish County, WA</title>
 <meta name="description" content="Family-owned landscaping and hardscaping serving Snohomish County. Custom designs, lawn care, irrigation, retaining walls. Free estimates. Licensed and insured." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  /* Core brand */
-  --forest:   #1a3326;
-  --pine:     #1e4230;
-  --sage:     #4a8a68;
-  --sage-lt:  #6aaa88;
-  --lime:     #8ecf86;
-  --lime-dk:  #6ab862;
-  --gold:     #c8a04a;
-  --gold-lt:  #dfc06f;
-  --gold-dk:  #a87c2e;
-  --amber:    #b8860b;
-  --cream:    #f5f0e8;
-
-  /* Section backgrounds — 3-color system */
-  --bg-green:       #1a3326;   /* deep forest green */
-  --bg-white:       #f8f5f0;   /* warm white / cream */
-  --bg-gold:        #c8972e;   /* rich amber gold */
-  --bg-gold-dk:     #b07820;   /* darker gold for variety */
-  --bg-gold-pale:   #fdf6e8;   /* very light gold tint */
-
-  /* Text on green */
-  --on-green-primary:   #f5f0e8;
-  --on-green-muted:     rgba(245,240,232,0.55);
-  --on-green-border:    rgba(142,207,134,0.15);
-
-  /* Text on white */
-  --on-white-primary:   #1a3326;
-  --on-white-muted:     #5a7a6a;
-  --on-white-border:    rgba(26,51,38,0.1);
-
-  /* Text on gold */
-  --on-gold-primary:    #0f1f15;
-  --on-gold-muted:      rgba(15,31,21,0.6);
-  --on-gold-border:     rgba(15,31,21,0.15);
-
-  --ink:      #0c1a12;
-  --panel:    #162b1e;
-  --panel2:   #1e3828;
-  --border:   rgba(90,148,120,0.14);
-  --dim:      rgba(245,240,232,0.55);
-  --dim2:     rgba(245,240,232,0.3);
-  --gold-bg:  rgba(200,160,74,0.1);
-  --lime-bg:  rgba(142,207,134,0.08);
-  --tr:       0.25s ease;
+  --forest:    #1a3326;
+  --pine:      #1e4230;
+  --sage:      #4a8a68;
+  --lime:      #8ecf86;
+  --lime-dk:   #6ab862;
+  --gold:      #c8a04a;
+  --gold-lt:   #dfc06f;
+  --gold-dk:   #a87c2e;
+  --cream:     #f5f0e8;
+  --bg-green:  #1a3326;
+  --bg-white:  #f8f5f0;
+  --bg-gold:   #c8972e;
+  --ink:       #0c1a12;
+  --panel:     #162b1e;
+  --panel2:    #1e3828;
+  --border:    rgba(90,148,120,0.14);
+  --dim:       rgba(245,240,232,0.55);
+  --lime-bg:   rgba(142,207,134,0.08);
+  --gold-bg:   rgba(200,160,74,0.1);
+  --tr:        0.25s ease;
 }
 
 html { scroll-behavior: smooth; }
-
 body {
   background: var(--bg-green);
-  color: var(--on-green-primary);
+  color: var(--cream);
   font-family: 'DM Sans', sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
 }
-
 body::before {
   content: '';
   position: fixed; inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
   opacity: 0.022; pointer-events: none; z-index: 9999;
 }
-
 a { text-decoration: none; color: inherit; }
 img { display: block; max-width: 100%; }
-.container { width: 100%; max-width: 1220px; margin: 0 auto; padding: 0 28px; }
+.container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 28px; }
 
-.display { font-family: 'Bebas Neue', sans-serif; line-height: 0.9; letter-spacing: 0.03em; text-transform: uppercase; }
-.heading { font-family: 'Syne', sans-serif; font-weight: 800; }
 .label {
   display: inline-flex; align-items: center; gap: 10px;
   font-family: 'Syne', sans-serif; font-size: 0.72rem; font-weight: 700;
@@ -87,38 +58,35 @@ img { display: block; max-width: 100%; }
 }
 .label::before { content: ''; display: block; width: 20px; height: 1px; background: var(--gold); }
 
-/* ─── BUTTONS ─── */
+/* BUTTONS */
 .btn {
   display: inline-flex; align-items: center; gap: 10px;
   font-family: 'Syne', sans-serif; font-size: 0.78rem; font-weight: 800;
-  letter-spacing: 0.18em; text-transform: uppercase;
+  letter-spacing: 0.16em; text-transform: uppercase;
   padding: 14px 28px; border: none; cursor: pointer;
   transition: all var(--tr); white-space: nowrap;
-  border-radius: 6px;
+  border-radius: 0 14px 0 14px;
 }
 .btn-gold { background: var(--gold); color: var(--ink); }
 .btn-gold:hover { background: var(--gold-lt); transform: translateY(-2px); box-shadow: 0 10px 36px rgba(200,160,74,0.4); }
-.btn-lime { background: var(--lime); color: var(--ink); }
-.btn-lime:hover { background: #b4e4ae; transform: translateY(-2px); box-shadow: 0 10px 36px rgba(150,212,142,0.35); }
-.btn-outline { background: transparent; border: 1.5px solid rgba(244,239,229,0.35); color: var(--cream); border-radius: 6px; }
-.btn-outline:hover { border-color: var(--cream); background: rgba(255,255,255,0.08); transform: translateY(-2px); }
-.btn-outline-gold { background: transparent; border: 1.5px solid rgba(200,160,74,0.5); color: var(--gold); border-radius: 6px; }
-.btn-outline-gold:hover { border-color: var(--gold); background: var(--gold-bg); transform: translateY(-2px); }
+.btn-outline { background: transparent; border: 1.5px solid rgba(244,239,229,0.3); color: var(--cream); border-radius: 0 14px 0 14px; }
+.btn-outline:hover { border-color: var(--cream); background: rgba(255,255,255,0.07); transform: translateY(-2px); }
+.btn-outline-gold { background: transparent; border: 1.5px solid rgba(200,160,74,0.5); color: var(--gold); border-radius: 0 14px 0 14px; }
+.btn-outline-gold:hover { border-color: var(--gold); background: var(--gold-bg); }
 
-/* ─── ANNOUNCE BAR ─── */
+/* ANNOUNCE */
 .announce {
   background: var(--bg-gold);
-  border-bottom: 1px solid rgba(15,31,21,0.15);
   padding: 9px 0; text-align: center;
 }
 .announce a {
-  font-family: 'Syne', sans-serif; font-size: 0.78rem; font-weight: 700;
-  letter-spacing: 0.18em; text-transform: uppercase; color: var(--on-gold-primary);
+  font-family: 'Syne', sans-serif; font-size: 0.76rem; font-weight: 700;
+  letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink);
   transition: opacity var(--tr);
 }
 .announce a:hover { opacity: 0.7; }
 
-/* ─── NAV ─── */
+/* NAV */
 nav {
   position: sticky; top: 0; z-index: 200;
   background: rgba(26,51,38,0.98);
@@ -129,1158 +97,435 @@ nav {
 nav.scrolled { box-shadow: 0 2px 32px rgba(0,0,0,0.4); }
 .nav-inner {
   display: flex; align-items: center; justify-content: space-between;
-  height: 68px; padding: 0 28px; max-width: 1220px; margin: 0 auto;
+  height: 68px; padding: 0 28px; max-width: 1200px; margin: 0 auto;
 }
-/* nav-logo text replaced by image */
-.nav-links { display: flex; gap: 2.2rem; list-style: none; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
 .nav-links a {
-  font-family: 'Syne', sans-serif; font-size: 0.78rem; font-weight: 600;
+  font-family: 'Syne', sans-serif; font-size: 0.76rem; font-weight: 600;
   letter-spacing: 0.14em; text-transform: uppercase;
   color: rgba(244,239,229,0.4); transition: color var(--tr);
 }
 .nav-links a:hover { color: var(--cream); }
-.nav-right { display: flex; align-items: center; gap: 14px; }
-.nav-phone {
-  font-family: 'Syne', sans-serif; font-size: 0.9rem; font-weight: 700;
-  color: rgba(244,239,229,0.65); transition: color var(--tr);
-}
-.nav-phone:hover { color: var(--gold); }
+.nav-right { display: flex; align-items: center; gap: 12px; }
 .hamburger {
   display: none; flex-direction: column; gap: 5px;
   background: none; border: none; cursor: pointer; padding: 6px;
 }
 .hamburger span { display: block; width: 22px; height: 1.5px; background: rgba(244,239,229,0.6); border-radius: 2px; transition: var(--tr); }
 
-/* ─── MOBILE DRAWER ─── */
+/* MOBILE DRAWER */
 .mobile-drawer {
   display: none; position: fixed;
   inset: 0; background: var(--forest); z-index: 300;
-  flex-direction: column; align-items: center; justify-content: center; gap: 2.2rem;
+  flex-direction: column; align-items: center; justify-content: center; gap: 2rem;
 }
 .mobile-drawer.open { display: flex; }
 .mobile-drawer a {
-  font-family: 'Bebas Neue', sans-serif; font-size: 3.2rem;
+  font-family: 'Bebas Neue', sans-serif; font-size: 3rem;
   letter-spacing: 0.08em; text-transform: uppercase;
   color: var(--cream); transition: color var(--tr);
 }
 .mobile-drawer a:hover { color: var(--lime); }
-.mobile-close { position: absolute; top: 20px; right: 24px; background: none; border: none; color: var(--dim); font-size: 2.2rem; cursor: pointer; line-height: 1; }
-.mobile-close:hover { color: var(--cream); }
+.mobile-close { position: absolute; top: 20px; right: 24px; background: none; border: none; color: var(--dim); font-size: 2.2rem; cursor: pointer; }
 
-/* ─── HERO — VIDEO BACKGROUND ─── */
+/* HERO */
 #hero {
   position: relative;
   min-height: 100svh;
-  min-height: 100vh; /* fallback */
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  background: var(--forest);
+  min-height: 100vh;
+  display: flex; align-items: center;
+  overflow: hidden; background: var(--forest);
 }
-
-.hero-video-wrap {
-  position: absolute; inset: 0; z-index: 0; overflow: hidden;
-}
-
+.hero-video-wrap { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
 .hero-video-wrap video {
-  position: absolute;
-  top: 50%; left: 50%;
+  position: absolute; top: 50%; left: 50%;
   transform: translate(-50%, -50%);
   min-width: 100%; min-height: 100%;
-  width: auto; height: auto;
-  object-fit: cover; object-position: center;
-  /* iOS Safari fix */
-  -webkit-transform: translate(-50%, -50%);
+  width: auto; height: auto; object-fit: cover;
 }
-
 .hero-overlay {
   position: absolute; inset: 0; z-index: 1;
   background:
-    linear-gradient(160deg, rgba(10,22,15,0.94) 0%, rgba(10,22,15,0.80) 55%, rgba(10,22,15,0.55) 100%),
+    linear-gradient(160deg, rgba(10,22,15,0.94) 0%, rgba(10,22,15,0.78) 55%, rgba(10,22,15,0.5) 100%),
     radial-gradient(ellipse 70% 60% at 75% 30%, rgba(45,106,79,0.28) 0%, transparent 65%);
 }
-
 .hero-inner {
   position: relative; z-index: 2;
   width: 100%; padding: 130px 28px 90px;
-  max-width: 1220px; margin: 0 auto;
+  max-width: 1200px; margin: 0 auto;
 }
-
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr 390px;
-  gap: 56px; align-items: center;
+  grid-template-columns: 1fr 380px;
+  gap: 52px; align-items: center;
 }
-
 .hero-badge {
   display: inline-flex; align-items: center; gap: 8px;
   background: rgba(200,160,74,0.12); border: 1px solid rgba(200,160,74,0.35);
-  border-radius: 100px; padding: 7px 16px; margin-bottom: 24px;
+  border-radius: 100px; padding: 7px 16px; margin-bottom: 22px;
 }
 .hero-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--lime); animation: pulse 2s infinite; flex-shrink: 0; }
 @keyframes pulse { 0%,100%{opacity:1;transform:scale(1);} 50%{opacity:0.3;transform:scale(0.6);} }
-.hero-badge-text { font-family: 'Syne', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
-
-.hero-title { font-size: clamp(2.6rem, 7vw, 7.5rem); color: #fff; margin-bottom: 6px; }
+.hero-badge-text { font-family: 'Syne', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
+.hero-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.6rem, 7vw, 7rem); line-height: 0.9; letter-spacing: 0.03em; text-transform: uppercase; color: #fff; margin-bottom: 6px; }
 .hero-title .g { color: var(--lime); }
 .hero-title .gd { color: var(--gold); }
-
-.hero-sub { font-size: clamp(0.95rem, 2vw, 1.1rem); font-weight: 300; color: rgba(255,255,255,0.65); max-width: 500px; margin: 18px 0 32px; line-height: 1.75; }
-
+.hero-sub { font-size: 1rem; font-weight: 300; color: rgba(255,255,255,0.62); max-width: 480px; margin: 18px 0 30px; line-height: 1.75; }
 .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.hero-trust-bar {
+  display: flex; align-items: center; gap: 20px;
+  margin-top: 32px; padding: 13px 20px;
+  background: rgba(0,0,0,0.32); backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px; width: fit-content; flex-wrap: wrap;
+}
+.htb-item {
+  display: flex; align-items: center; gap: 7px;
+  font-family: 'Syne', sans-serif; font-size: 0.76rem; font-weight: 600;
+  letter-spacing: 0.06em; color: rgba(255,255,255,0.82);
+}
+.htb-stars { color: var(--gold); font-size: 0.82rem; letter-spacing: 2px; }
+.htb-phone { color: #fff; font-weight: 700; transition: color 0.2s; }
+.htb-phone:hover { color: var(--gold); }
+.htb-divider { width: 1px; height: 16px; background: rgba(255,255,255,0.18); flex-shrink: 0; }
 
-/* hero trust bar responsive handled below */
-
-/* ─── HERO QUOTE CARD ─── */
+/* HERO QUOTE CARD */
 .hero-quote-card {
-  background: rgba(12,26,18,0.88);
+  background: rgba(12,26,18,0.9);
   border: 1px solid rgba(142,207,134,0.15);
   border-top: 3px solid var(--gold);
   border-radius: 24px; overflow: hidden;
   box-shadow: 0 32px 64px rgba(0,0,0,0.5);
   backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
 }
-.hqc-head { background: rgba(255,255,255,0.04); padding: 20px 24px; border-bottom: 1px solid rgba(142,207,134,0.1); }
-.hqc-head h3 { font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: #fff; margin-bottom: 3px; }
-.hqc-head p { font-size: 0.8rem; color: rgba(255,255,255,0.4); }
-.hqc-body { padding: 20px 24px; }
+.hqc-head { background: rgba(255,255,255,0.04); padding: 18px 22px; border-bottom: 1px solid rgba(142,207,134,0.1); }
+.hqc-head h3 { font-family: 'Syne', sans-serif; font-size: 0.92rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: #fff; margin-bottom: 2px; }
+.hqc-head p { font-size: 0.78rem; color: rgba(255,255,255,0.38); }
+.hqc-body { padding: 18px 22px; }
 .fg { display: flex; flex-direction: column; gap: 5px; margin-bottom: 10px; }
-.fg label { font-family: 'Syne', sans-serif; font-size: 0.64rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.35); }
+.fg label { font-family: 'Syne', sans-serif; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.32); }
 .fg input, .fg select {
   background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 12px; padding: 11px 14px; color: #fff;
-  font-family: 'DM Sans', sans-serif; font-size: 0.9rem; width: 100%; outline: none;
-  transition: border-color var(--tr), box-shadow var(--tr);
-  -webkit-appearance: none; appearance: none;
+  border-radius: 10px; padding: 10px 13px; color: #fff;
+  font-family: 'DM Sans', sans-serif; font-size: 0.88rem; width: 100%; outline: none;
+  transition: border-color var(--tr); -webkit-appearance: none; appearance: none;
 }
-.fg input::placeholder { color: rgba(255,255,255,0.22); }
-.fg input:focus, .fg select:focus { border-color: var(--lime); box-shadow: 0 0 0 3px rgba(142,207,134,0.12); }
+.fg input::placeholder { color: rgba(255,255,255,0.2); }
+.fg input:focus, .fg select:focus { border-color: var(--lime); box-shadow: 0 0 0 3px rgba(142,207,134,0.1); }
 .fg select option { background: #1a3326; color: #fff; }
 .hqc-submit { margin-top: 4px; }
-.hqc-submit .btn { width: 100%; justify-content: center; font-size: 0.8rem; padding: 13px; border-radius: 100px !important; }
-.hqc-note { text-align: center; margin-top: 8px; font-size: 0.68rem; color: rgba(255,255,255,0.2); }
+.hqc-submit .btn { width: 100%; justify-content: center; font-size: 0.78rem; padding: 13px; }
+.hqc-note { text-align: center; margin-top: 8px; font-size: 0.66rem; color: rgba(255,255,255,0.18); }
 
-/* ─── MARQUEE ─── */
-.marquee-wrap { background: var(--bg-white); overflow: hidden; padding: 11px 0; border-top: 1px solid rgba(26,51,38,0.1); border-bottom: 1px solid rgba(26,51,38,0.1); }
-.marquee-track { display: flex; animation: marquee 26s linear infinite; width: max-content; }
+/* MARQUEE */
+.marquee-wrap { background: var(--bg-white); overflow: hidden; padding: 10px 0; border-top: 1px solid rgba(26,51,38,0.1); border-bottom: 1px solid rgba(26,51,38,0.1); }
+.marquee-track { display: flex; animation: marquee 28s linear infinite; width: max-content; }
 .marquee-track:hover { animation-play-state: paused; }
 @keyframes marquee { from{transform:translateX(0);} to{transform:translateX(-50%);} }
-.marquee-item { display: inline-flex; align-items: center; gap: 18px; padding: 0 28px; white-space: nowrap; }
-.marquee-text { font-family: 'Bebas Neue', sans-serif; font-size: 0.9rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--forest); }
-.marquee-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold-dk); display: inline-block; flex-shrink: 0; }
+.marquee-item { display: inline-flex; align-items: center; gap: 16px; padding: 0 24px; white-space: nowrap; }
+.marquee-text { font-family: 'Bebas Neue', sans-serif; font-size: 0.88rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--forest); }
+.marquee-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold-dk); display: inline-block; }
 
-/* ─── SECTION SYSTEM ─── */
-section { padding: 100px 0; }
+/* SECTIONS */
+section { padding: 90px 0; }
+.s-bg-white { background: var(--bg-white); color: var(--forest); }
+.s-bg-green { background: var(--bg-green); color: var(--cream); }
+.s-bg-gold-pale { background: #fdf6e8; color: var(--forest); }
 
-/* GREEN sections — dark forest */
-.s-bg-green {
-  background: var(--bg-green);
-  color: var(--on-green-primary);
+.s-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3rem, 6vw, 6rem);
+  line-height: 0.9; letter-spacing: 0.02em; text-transform: uppercase;
 }
-.s-bg-green .s-title { color: var(--on-green-primary); }
-.s-bg-green .s-body { color: var(--on-green-muted); }
-.s-bg-green .label { color: var(--gold); }
-.s-bg-green .label::before { background: var(--gold); }
-.s-bg-green .svc-card { background: rgba(255,255,255,0.04); }
-.s-bg-green .svc-card:hover { background: rgba(255,255,255,0.07); }
-.s-bg-green .area-chip { background: rgba(255,255,255,0.05); border-color: rgba(142,207,134,0.15); }
-.s-bg-green .area-chip:hover { background: rgba(142,207,134,0.1); border-color: var(--lime); }
-.s-bg-green .area-name { color: var(--on-green-primary); }
-.s-bg-green .faq-q { color: var(--on-green-primary); }
-.s-bg-green .faq-item { border-bottom-color: rgba(142,207,134,0.15); }
-.s-bg-green .faq-a { color: var(--on-green-muted); }
-.s-bg-green .pillar { border-bottom-color: rgba(142,207,134,0.15); }
-.s-bg-green .pillar-title { color: var(--on-green-primary); }
-.s-bg-green .pillar-body { color: var(--on-green-muted); }
-.s-bg-green .tl-title { color: var(--on-green-primary); }
-.s-bg-green .tl-body { color: var(--on-green-muted); }
-.s-bg-green .tl-dot { background: rgba(255,255,255,0.05); border-color: rgba(142,207,134,0.2); color: var(--on-green-muted); }
-.s-bg-green .tl-line { background: rgba(142,207,134,0.15); }
-.s-bg-green .why-panel { background: rgba(255,255,255,0.05); border-color: rgba(142,207,134,0.15); }
-.s-bg-green .why-title { color: var(--on-green-primary); }
-.s-bg-green .why-item { border-bottom-color: rgba(142,207,134,0.12); }
-.s-bg-green .why-item-title { color: var(--on-green-primary); }
-.s-bg-green .why-item p { color: var(--on-green-muted); }
-
-/* WHITE sections — warm off-white */
-.s-bg-white {
-  background: var(--bg-white);
-  color: var(--on-white-primary);
-}
-.s-bg-white .s-title { color: var(--on-white-primary); }
-.s-bg-white .s-title .g { color: var(--forest); }
-.s-bg-white .s-title .gd { color: var(--gold); }
-.s-bg-white .s-body { color: var(--on-white-muted); }
-.s-bg-white .label { color: var(--gold-dk); }
-.s-bg-white .label::before { background: var(--gold-dk); }
-.s-bg-white .svc-name { color: var(--on-white-primary); }
-.s-bg-white .svc-desc { color: var(--on-white-muted); }
-.s-bg-white .svc-num { color: rgba(26,51,38,0.05); }
-.s-bg-white .svc-card { background: #ffffff; box-shadow: 0 2px 20px rgba(26,51,38,0.06); }
-.s-bg-white .svc-card:hover { background: #fefefe; box-shadow: 0 8px 40px rgba(26,51,38,0.12); }
-.s-bg-white .svc-card::before { bottom: 0; height: 3px; }
-.s-bg-white .svc-icon { background: rgba(142,207,134,0.15); border-color: rgba(142,207,134,0.3); }
-.s-bg-white .svc-card:hover .svc-icon { background: var(--forest); }
-.s-bg-white .svc-link { color: var(--forest); }
-.s-bg-white .svc-card:nth-child(even) .svc-link { color: var(--gold-dk); }
-.s-bg-white .area-chip { background: #ffffff; border-color: rgba(26,51,38,0.1); box-shadow: 0 2px 8px rgba(26,51,38,0.06); }
-.s-bg-white .area-chip:hover { background: var(--forest); border-color: var(--forest); }
-.s-bg-white .area-chip:hover .area-name { color: #fff; }
-.s-bg-white .area-name { color: var(--on-white-primary); }
-.s-bg-white .about-highlight { background: rgba(200,160,74,0.08); border-left-color: var(--gold); color: var(--on-white-muted); }
-.s-bg-white .pillar { border-bottom-color: rgba(26,51,38,0.1); }
-.s-bg-white .pillar-title { color: var(--on-white-primary); }
-.s-bg-white .pillar-body { color: var(--on-white-muted); }
-.s-bg-white .pillar-num { color: var(--gold-dk); }
-.s-bg-white .faq-q { color: var(--on-white-primary); }
-.s-bg-white .faq-q:hover { color: var(--forest); }
-.s-bg-white .faq-item { border-bottom-color: rgba(26,51,38,0.1); }
-.s-bg-white .faq-a { color: var(--on-white-muted); }
-.s-bg-white .faq-arrow { background: rgba(26,51,38,0.07); color: var(--sage); }
-.s-bg-white .info-block { background: #fff; border-color: rgba(26,51,38,0.1); border-left-color: var(--gold); }
-.s-bg-white .info-block:hover { background: var(--bg-gold-pale); border-left-color: var(--forest); }
-.s-bg-white .info-block-label { color: var(--gold-dk); }
-.s-bg-white .info-block-val { color: var(--on-white-primary); }
-.s-bg-white .contact-form-box { background: #fff; border-color: rgba(26,51,38,0.1); box-shadow: 0 4px 40px rgba(26,51,38,0.08); }
-.s-bg-white .form-title { color: var(--on-white-primary); }
-.s-bg-white .fg label { color: rgba(26,51,38,0.45); }
-.s-bg-white .fg input, .s-bg-white .fg select, .s-bg-white .contact-fg textarea { background: var(--bg-white); border-color: rgba(26,51,38,0.14); color: var(--on-white-primary); }
-.s-bg-white .fg input::placeholder, .s-bg-white .contact-fg textarea::placeholder { color: rgba(26,51,38,0.25); }
-.s-bg-white .fg input:focus, .s-bg-white .fg select:focus, .s-bg-white .contact-fg textarea:focus { border-color: var(--forest); box-shadow: 0 0 0 3px rgba(26,51,38,0.08); }
-.s-bg-white .tl-dot { background: #fff; border-color: rgba(26,51,38,0.14); color: var(--on-white-muted); }
-.s-bg-white .tl-item:hover .tl-dot { border-color: var(--forest); color: var(--forest); background: rgba(26,51,38,0.05); }
-.s-bg-white .tl-line { background: rgba(26,51,38,0.1); }
-.s-bg-white .tl-title { color: var(--on-white-primary); }
-.s-bg-white .tl-body { color: var(--on-white-muted); }
-.s-bg-white .why-panel { background: #fff; border-color: rgba(26,51,38,0.1); }
-.s-bg-white .why-title { color: var(--on-white-primary); }
-.s-bg-white .why-item { border-bottom-color: rgba(26,51,38,0.08); }
-.s-bg-white .why-item-title { color: var(--on-white-primary); }
-.s-bg-white .why-item p { color: var(--on-white-muted); }
-
-/* GOLD sections — warm amber */
-.s-bg-gold {
-  background: var(--bg-gold);
-  color: var(--on-gold-primary);
-}
-.s-bg-gold .s-title { color: var(--on-gold-primary); }
-.s-bg-gold .s-title .g { color: var(--forest); }
-.s-bg-gold .s-body { color: var(--on-gold-muted); }
-.s-bg-gold .label { color: var(--forest); }
-.s-bg-gold .label::before { background: var(--forest); }
-.s-bg-gold .section-h { color: var(--on-gold-primary); }
-
-/* GOLD PALE — light gold tint */
-.s-bg-gold-pale {
-  background: var(--bg-gold-pale);
-  color: var(--on-white-primary);
-}
-.s-bg-gold-pale .s-title { color: var(--on-white-primary); }
-.s-bg-gold-pale .s-title .g { color: var(--forest); }
-.s-bg-gold-pale .s-title .gd { color: var(--gold-dk); }
-.s-bg-gold-pale .s-body { color: var(--on-white-muted); }
-.s-bg-gold-pale .label { color: var(--gold-dk); }
-.s-bg-gold-pale .label::before { background: var(--gold-dk); }
-.s-bg-gold-pale .area-chip { background: #fff; border-color: rgba(200,160,74,0.2); }
-.s-bg-gold-pale .area-chip:hover { background: var(--forest); border-color: var(--forest); }
-.s-bg-gold-pale .area-chip:hover .area-name { color: #fff; }
-.s-bg-gold-pale .area-name { color: var(--on-white-primary); }
-.s-bg-gold-pale .area-dot { background: var(--gold-dk); }
-
-/* ── About / pillar text on light backgrounds ── */
-.s-bg-gold-pale p,
-.s-bg-white p { color: var(--on-white-muted); }
-
-.s-bg-gold-pale .about-highlight,
-.s-bg-white .about-highlight {
-  background: rgba(26,51,38,0.06);
-  border-left-color: var(--forest);
-  color: var(--forest);
-}
-
-.s-bg-gold-pale .pillar-title,
-.s-bg-white .pillar-title { color: var(--forest); }
-
-.s-bg-gold-pale .pillar-body,
-.s-bg-white .pillar-body { color: var(--on-white-muted); }
-
-.s-bg-gold-pale .pillar-num,
-.s-bg-white .pillar-num { color: var(--gold-dk); }
-
-.s-bg-gold-pale .pillar,
-.s-bg-white .pillar { border-bottom-color: rgba(26,51,38,0.1); }
-
-/* Inline style overrides — force text dark on light sections */
-.s-bg-gold-pale [style*="color:var(--dim)"],
-.s-bg-gold-pale [style*="color: var(--dim)"] { color: var(--on-white-muted) !important; }
-
-.s-bg-gold-pale [style*="color:var(--cream)"],
-.s-bg-gold-pale [style*="color: var(--cream)"] { color: var(--forest) !important; }
-
-/* Section title inline overrides */
-.s-bg-gold-pale [style*="color:var(--white)"],
-.s-bg-gold-pale [style*="color:#fff"],
-.s-bg-gold-pale [style*="color: #fff"] { color: var(--forest) !important; }
-
-/* About content paragraphs — the about section inline text */
-.s-bg-gold-pale .about-content > p,
-.s-bg-gold-pale .about-content > * { color: var(--on-white-muted); }
-
-/* FAQ on gold-pale */
-.s-bg-gold-pale .faq-q { color: var(--forest); }
-.s-bg-gold-pale .faq-q:hover { color: var(--gold-dk); }
-.s-bg-gold-pale .faq-item { border-bottom-color: rgba(26,51,38,0.1); }
-.s-bg-gold-pale .faq-a { color: var(--on-white-muted); }
-.s-bg-gold-pale .faq-arrow { background: rgba(26,51,38,0.08); color: var(--forest); }
-.s-bg-gold-pale .faq-item.open .faq-arrow { background: var(--gold-dk); color: #fff; }
-
-/* Legacy aliases */
-.s-bg-forest { background: var(--bg-green); color: var(--on-green-primary); }
-.s-bg-ink { background: var(--ink); color: var(--cream); }
-.s-bg-panel { background: var(--panel); color: var(--cream); }
-
-.s-header { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: end; margin-bottom: 56px; }
-.s-header-full { text-align: center; max-width: 580px; margin: 0 auto 64px; }
-.s-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3rem, 6.5vw, 6.5rem); line-height: 0.9; letter-spacing: 0.02em; color: var(--cream); text-transform: uppercase; }
-.s-title .g { color: var(--lime); }
-.s-title .gd { color: var(--gold); }
-.s-body { font-size: 1rem; font-weight: 300; color: var(--dim); line-height: 1.8; max-width: 500px; }
-
-/* ─── SERVICES ─── */
-.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
-.svc-card {
-  background: var(--panel2); padding: 40px 28px;
-  position: relative; overflow: hidden; transition: background var(--tr); cursor: default;
-}
-.svc-card::before { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: transparent; transition: background var(--tr); }
-.svc-card:nth-child(odd):hover::before { background: var(--lime); }
-.svc-card:nth-child(even):hover::before { background: var(--gold); }
-.svc-card:hover { background: var(--panel); }
-.svc-num { font-family: 'Bebas Neue', sans-serif; font-size: 5rem; color: rgba(255,255,255,0.03); position: absolute; bottom: -8px; right: 10px; line-height: 1; pointer-events: none; transition: color var(--tr); }
-.svc-card:hover .svc-num { color: rgba(150,212,142,0.06); }
-.svc-icon { width: 48px; height: 48px; border-radius: 10px; background: var(--lime-bg); border: 1px solid rgba(150,212,142,0.18); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 20px; transition: background var(--tr); }
-.svc-card:hover .svc-icon { background: var(--lime); }
-.svc-name { font-family: 'Syne', sans-serif; font-size: 1.02rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: var(--cream); margin-bottom: 10px; }
-.svc-desc { font-size: 0.87rem; font-weight: 300; color: var(--dim); line-height: 1.75; }
-.svc-link { display: inline-flex; align-items: center; gap: 5px; margin-top: 14px; font-family: 'Syne', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sage-lt); transition: gap var(--tr), color var(--tr); }
-.svc-card:nth-child(even) .svc-link { color: var(--gold); }
-.svc-link:hover { gap: 10px; }
-
-/* ─── ABOUT ─── */
-.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-.about-img-wrap { position: relative; }
-.about-img-frame { border-radius: 12px; overflow: hidden; aspect-ratio: 4/3; background: var(--panel2); }
-.about-img-frame img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
-.about-img-frame:hover img { transform: scale(1.04); }
-.about-badge-card {
-  position: absolute; bottom: -24px; right: -24px;
-  background: var(--gold); color: var(--ink);
-  padding: 18px 22px; border-radius: 4px; text-align: center;
-  box-shadow: 0 12px 40px rgba(200,160,74,0.4);
-}
-.about-badge-num { font-family: 'Bebas Neue', sans-serif; font-size: 2.8rem; line-height: 1; display: block; }
-.about-badge-sub { font-family: 'Syne', sans-serif; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.65; display: block; margin-top: 2px; }
-.about-highlight {
-  background: var(--lime-bg); border-left: 3px solid var(--lime);
-  border-radius: 0 6px 6px 0; padding: 14px 18px; margin: 20px 0 28px;
-  font-size: 0.9rem; color: var(--dim); font-style: italic; line-height: 1.7;
-}
-.pillars { display: flex; flex-direction: column; gap: 0; margin-top: 28px; }
-.pillar { display: flex; gap: 14px; padding: 18px 0; border-bottom: 1px solid var(--border); }
-.pillar:last-child { border-bottom: none; }
-.pillar-num { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; color: var(--gold); line-height: 1; flex-shrink: 0; min-width: 2rem; }
-.pillar-title { font-family: 'Syne', sans-serif; font-size: 0.88rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--cream); margin-bottom: 2px; }
-.pillar-body { font-size: 0.85rem; font-weight: 300; color: var(--dim); line-height: 1.65; }
-
-/* ─── STATS STRIP ─── */
-.stats-strip { background: var(--bg-gold); }
-.stats-strip .stat-num { color: var(--on-gold-primary); }
-.stats-strip .stat-label { color: var(--on-gold-muted); }
-.stats-strip .stat-item { border-right-color: rgba(15,31,21,0.15); }
-.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
-.stat-item { padding: 44px 24px; text-align: center; border-right: 1px solid rgba(0,0,0,0.1); }
-.stat-item:last-child { border-right: none; }
-.stat-num { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.4rem, 4vw, 3.5rem); color: var(--ink); line-height: 1; margin-bottom: 4px; }
-.stat-label { font-family: 'Syne', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(0,0,0,0.5); }
-
-/* ─── PROCESS ─── */
-.process-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-.timeline { display: flex; flex-direction: column; gap: 0; }
-.tl-item { display: flex; gap: 16px; }
-.tl-marker { display: flex; flex-direction: column; align-items: center; }
-.tl-dot {
-  width: 52px; height: 52px; border-radius: 50%;
-  background: var(--panel2); border: 2px solid var(--border);
-  display: flex; align-items: center; justify-content: center;
-  font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; color: var(--dim);
-  flex-shrink: 0; transition: all var(--tr);
-}
-.tl-item:hover .tl-dot { border-color: var(--lime); color: var(--lime); background: var(--lime-bg); }
-.tl-line { width: 2px; flex: 1; background: var(--border); margin: 8px 0; min-height: 32px; }
-.tl-content { padding-bottom: 36px; }
-.tl-title { font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: var(--cream); margin-bottom: 7px; }
-.tl-body { font-size: 0.87rem; font-weight: 300; color: var(--dim); line-height: 1.75; }
-
-.why-panel {
-  background: var(--panel2); border: 1px solid var(--border);
-  border-top: 3px solid var(--gold); border-radius: 6px; padding: 38px 34px;
-}
-.why-title { font-family: 'Syne', sans-serif; font-size: 0.88rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; color: var(--cream); margin-bottom: 26px; }
-.why-list { display: flex; flex-direction: column; gap: 0; }
-.why-item { display: flex; gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--border); }
-.why-item:last-child { border-bottom: none; }
-.why-check { width: 22px; height: 22px; border-radius: 50%; background: var(--lime); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; font-size: 0.65rem; font-weight: 900; color: var(--ink); }
-.why-item-title { font-family: 'Syne', sans-serif; font-size: 0.84rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--cream); margin-bottom: 3px; }
-.why-item p { font-size: 0.82rem; font-weight: 300; color: var(--dim); line-height: 1.6; }
-
-/* ─── AREAS ─── */
-.areas-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
-.area-chip {
-  background: var(--panel2); border: 1px solid var(--border);
-  border-radius: 6px; padding: 14px 16px;
-  display: flex; align-items: center; gap: 10px;
-  transition: all var(--tr);
-}
-.area-chip:hover { border-color: var(--sage-lt); background: rgba(30,66,48,0.5); transform: translateY(-2px); }
-.area-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--lime); flex-shrink: 0; }
-.area-name { font-family: 'Syne', sans-serif; font-size: 0.84rem; font-weight: 600; color: var(--cream); }
-
-/* ─── FAQ ─── */
-.faq-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 80px; align-items: start; }
-.faq-list { display: flex; flex-direction: column; gap: 0; }
-.faq-item { border-bottom: 1px solid var(--border); }
-.faq-q {
-  width: 100%; background: none; border: none; text-align: left;
-  padding: 18px 0; cursor: pointer;
-  display: flex; justify-content: space-between; align-items: center; gap: 1rem;
-  font-family: 'Syne', sans-serif; font-size: 0.92rem; font-weight: 600;
-  color: var(--cream); transition: color var(--tr);
-}
-.faq-q:hover { color: var(--lime); }
-.faq-arrow { width: 24px; height: 24px; border-radius: 50%; background: rgba(90,148,120,0.12); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--sage-lt); font-size: 1rem; transition: transform 0.3s, background 0.2s; }
-.faq-item.open .faq-arrow { transform: rotate(45deg); background: var(--gold); color: var(--ink); }
-.faq-a { font-size: 0.88rem; font-weight: 300; color: var(--dim); line-height: 1.75; max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; }
-.faq-item.open .faq-a { max-height: 300px; padding-bottom: 18px; }
-
-/* ─── CTA SECTION ─── */
-.cta-section { background: var(--bg-green); position: relative; overflow: hidden; padding: 80px 0; }
-.cta-section::before {
-  content: ''; position: absolute; inset: 0;
-  background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(200,160,74,0.15) 0%, transparent 60%);
-  pointer-events: none;
-}
-.cta-section .cta-title { color: #fff; }
-.cta-section .cta-sub { color: rgba(245,240,232,0.6); }
-.cta-inner { display: grid; grid-template-columns: 1fr auto; gap: 4rem; align-items: center; position: relative; z-index: 1; }
-.cta-title { font-size: clamp(2.4rem, 5vw, 5.5rem); line-height: 0.92; }
-.cta-sub { font-size: 1rem; font-weight: 300; color: rgba(244,239,229,0.6); margin-top: 1.2rem; max-width: 460px; line-height: 1.65; }
-
-/* ─── CONTACT ─── */
-.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
-.contact-form-box { background: var(--panel2); border: 1px solid var(--border); border-top: 3px solid var(--gold); border-radius: 6px; padding: 40px 34px; }
-.form-title { font-family: 'Syne', sans-serif; font-size: 0.9rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--cream); margin-bottom: 26px; }
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.form-full { grid-column: 1 / -1; }
-.contact-fg textarea { background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 4px; padding: 12px 14px; color: var(--cream); font-family: 'DM Sans', sans-serif; font-size: 0.9rem; width: 100%; outline: none; min-height: 110px; resize: vertical; transition: border-color var(--tr); }
-.contact-fg textarea:focus { border-color: var(--lime); }
-.contact-fg textarea::placeholder { color: rgba(255,255,255,0.12); }
-
-.contact-info { display: flex; flex-direction: column; gap: 1.5rem; }
-.info-block { background: var(--panel2); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 4px; padding: 20px 22px; transition: border-left-color var(--tr), background var(--tr); }
-.info-block:hover { border-left-color: var(--lime); background: rgba(30,66,48,0.4); }
-.info-block-label { font-family: 'Syne', sans-serif; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
-.info-block-val { font-size: 0.97rem; font-weight: 500; color: var(--cream); }
-.info-block-val a { color: var(--lime); transition: color var(--tr); }
-.info-block-val a:hover { color: var(--gold); }
-
-/* ─── FOOTER ─── */
-footer { background: #080f0b; border-top: 1px solid var(--border); padding: 64px 0 28px; }
-.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 5rem; margin-bottom: 48px; padding-bottom: 40px; border-bottom: 1px solid var(--border); }
-/* footer-logo text replaced by image */
-.footer-desc { font-size: 0.86rem; font-weight: 300; color: rgba(244,239,229,0.3); line-height: 1.85; max-width: 280px; margin-bottom: 20px; }
-.footer-col-title { font-family: 'Syne', sans-serif; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
-.footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-.footer-links a { font-size: 0.86rem; font-weight: 300; color: rgba(244,239,229,0.3); transition: color var(--tr); }
-.footer-links a:hover { color: var(--lime); }
-.footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
-.footer-copy { font-size: 0.77rem; color: rgba(244,239,229,0.2); }
-.footer-dev { font-family: 'Syne', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(244,239,229,0.18); transition: color var(--tr); }
-.footer-dev:hover { color: var(--gold); }
-
-/* ─── FLOATING CTA ─── */
-.floating-cta { position: fixed; bottom: 24px; right: 24px; z-index: 150; display: none; }
-.floating-cta.visible { display: block; }
-.floating-cta .btn { border-radius: 100px; box-shadow: 0 8px 32px rgba(200,160,74,0.4); animation: pulse-btn 2.5s ease-in-out infinite; }
-@keyframes pulse-btn { 0%,100%{box-shadow:0 8px 32px rgba(200,160,74,0.4);} 50%{box-shadow:0 8px 48px rgba(200,160,74,0.65);} }
-
-/* ─── LOGO IMAGE ─── */
-.nav-logo-img { display: flex; align-items: center; }
-.nav-logo-img img { height: 44px; width: auto; display: block; }
-.footer-logo-img { margin-bottom: 16px; }
-.footer-logo-img img { height: 52px; width: auto; display: block; }
-
-/* ─── GLOBAL ROUNDED CORNERS ─── */
-/* Buttons */
-.btn { border-radius: 100px !important; }
-
-/* Cards */
-.svc-card { border-radius: 20px !important; }
-.services-grid { gap: 16px !important; background: none !important; }
-.s-bg-white .svc-card { border: 1px solid rgba(26,51,38,0.08); }
-
-/* Hero quote card */
-.hero-quote-card { border-radius: 24px !important; overflow: hidden; }
-.hqc-head { border-radius: 0 !important; }
-
-/* Form inputs */
-.fg input, .fg select, .contact-fg textarea { border-radius: 12px !important; }
-
-/* Contact form box */
-.contact-form-box { border-radius: 24px !important; }
-
-/* Info blocks */
-.info-block { border-radius: 16px !important; border-left-width: 4px !important; }
-
-/* Why panel */
-.why-panel { border-radius: 24px !important; }
-
-/* About image */
-.about-img-frame { border-radius: 24px !important; }
-.about-badge-card { border-radius: 16px !important; bottom: -20px; right: -20px; }
-
-/* Stats strip — soft top corners */
-.stats-strip { border-radius: 0; }
-
-/* FAQ items */
-.faq-item:first-child { border-radius: 16px 16px 0 0; }
-.faq-item:last-child { border-radius: 0 0 16px 16px; border-bottom: none !important; }
-.faq-list { border-radius: 16px; overflow: hidden; border: 1px solid rgba(26,51,38,0.1); }
-.s-bg-green .faq-list { border-color: rgba(142,207,134,0.15); }
-.s-bg-gold-pale .faq-list { border-color: rgba(200,160,74,0.2); }
-.faq-item { border-bottom-width: 1px; }
-
-/* Area chips */
-.area-chip { border-radius: 100px !important; }
-
-/* Hero badge */
-.hero-badge { border-radius: 100px; }
-
-/* Trust icons */
-.trust-icon { border-radius: 12px !important; }
-
-/* Process timeline dots */
-.tl-dot { border-radius: 50% !important; }
-
-/* Service icons */
-.svc-icon { border-radius: 14px !important; }
-
-/* Why check dots */
-.why-check { border-radius: 50% !important; }
-
-/* Hero announce bar */
-.hero-badge { border-radius: 100px; }
-
-/* Nav button */
-.btn-outline-gold { border-radius: 100px !important; }
-
-/* Floating CTA */
-.floating-cta .btn { border-radius: 100px !important; }
-
-/* Mobile drawer */
-.mobile-drawer { border-radius: 0; }
-
-/* Quote submit */
-.hqc-submit .btn { border-radius: 100px !important; }
-
-/* Hero quote card inner */
-.quote-card { border-radius: 24px !important; }
-
-/* Footer quote btn */
-footer .btn { border-radius: 100px !important; }
-
-/* CTA btn */
-.cta-section .btn { border-radius: 100px !important; }
-
-/* Announce bar */
-.announce { border-radius: 0; }
-.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s cubic-bezier(0.22,0.61,0.36,1); }
-.reveal.visible { opacity: 1; transform: translateY(0); }
-.rd1{transition-delay:0.1s;} .rd2{transition-delay:0.2s;} .rd3{transition-delay:0.3s;} .rd4{transition-delay:0.4s;}
-
-/* ─── RESPONSIVE — TABLET ─── */
-@media(max-width:1100px) {
-  .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-  .hero-quote-card { max-width: 540px; }
-  .services-grid { grid-template-columns: repeat(2, 1fr); }
-  .about-grid { grid-template-columns: 1fr; gap: 60px; }
-  .about-badge-card { right: 0; }
-  .process-grid { grid-template-columns: 1fr; gap: 56px; }
-  .faq-grid { grid-template-columns: 1fr; gap: 48px; }
-  .contact-grid { grid-template-columns: 1fr; }
-  .cta-inner { grid-template-columns: 1fr; text-align: center; }
-  .cta-inner .btn-gold { margin: 0 auto; display: flex; width: fit-content; }
-  .s-header { grid-template-columns: 1fr; gap: 1.5rem; }
-  .stats-grid { grid-template-columns: repeat(2, 1fr); }
-  .stat-item:nth-child(2) { border-right: none; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
-  .footer-grid > *:first-child { grid-column: 1 / -1; }
-  .areas-grid { grid-template-columns: repeat(3, 1fr); }
-}
-
-/* ─── RESPONSIVE — MOBILE ─── */
-@media(max-width:768px) {
-  /* Nav */
-  .nav-links { display: none; }
-  .hamburger { display: flex; }
-  .nav-right .btn-outline-gold:first-child { display: none; } /* hide Call Now on mobile, show in drawer */
-  .nav-inner { padding: 0 18px; }
-  .nav-logo-img img { height: 36px; }
-
-  /* Announce */
-  .announce a { font-size: 0.7rem; letter-spacing: 0.1em; }
-
-  /* Sections */
-  section { padding: 60px 0; }
-  .container { padding: 0 18px; }
-
-  /* Hero */
-  #hero { min-height: 100svh; min-height: 100vh; align-items: flex-start; padding-top: 0; }
-  .hero-inner { padding: 90px 18px 60px; }
-  .hero-grid { grid-template-columns: 1fr; gap: 36px; }
-  .hero-title { font-size: clamp(2.4rem, 11vw, 3.5rem); }
-  .hero-sub { font-size: 0.95rem; margin: 14px 0 24px; }
-  .hero-actions { flex-direction: column; gap: 10px; }
-  .hero-actions .btn { width: 100%; justify-content: center; font-size: 0.82rem; padding: 15px 20px; }
-  .hero-trust { gap: 10px; margin-top: 28px; padding-top: 22px; }
-  .trust-text { font-size: 0.68rem; }
-  .hero-quote-card { max-width: 100%; }
-  .hqc-body { padding: 16px 18px; }
-  .hqc-head { padding: 16px 18px; }
-
-  /* Badge */
-  .hero-badge { margin-bottom: 18px; }
-  .hero-badge-text { font-size: 0.65rem; letter-spacing: 0.12em; }
-
-  /* Services */
-  .services-grid { grid-template-columns: 1fr; gap: 12px !important; }
-  .svc-card { padding: 28px 22px; border-radius: 16px !important; }
-  .s-header { margin-bottom: 36px; }
-
-  /* About */
-  .about-img-wrap { padding-bottom: 30px; }
-  .about-badge-card { right: 0; bottom: 0; padding: 14px 18px; }
-  .about-badge-num { font-size: 2rem; }
-
-  /* Stats */
-  .stats-grid { grid-template-columns: repeat(2, 1fr); }
-  .stat-item { padding: 28px 16px; border-right: none; border-bottom: 1px solid rgba(0,0,0,0.12); }
-  .stat-item:nth-child(2) { border-right: 1px solid rgba(0,0,0,0.12) !important; }
-  .stat-item:nth-child(3), .stat-item:nth-child(4) { border-bottom: none; }
-  .stat-item:last-child { border-bottom: none; border-right: none !important; }
-
-  /* Process */
-  .process-grid { grid-template-columns: 1fr; gap: 40px; }
-  .tl-dot { width: 44px; height: 44px; font-size: 0.9rem; }
-  .why-panel { padding: 24px 20px; border-radius: 20px !important; }
-
-  /* Areas */
-  .areas-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
-  .area-chip { padding: 11px 14px; }
-  .area-name { font-size: 0.78rem; }
-
-  /* FAQ */
-  .faq-grid { grid-template-columns: 1fr; gap: 32px; }
-  .faq-q { font-size: 0.85rem; padding: 15px 0; }
-
-  /* CTA */
-  .cta-section { padding: 60px 0; }
-  .cta-title { font-size: clamp(2rem, 9vw, 3rem); }
-  .cta-sub { font-size: 0.9rem; }
-  .cta-inner { gap: 28px; }
-  .cta-inner .btn-gold { width: 100%; justify-content: center; }
-
-  /* Contact */
-  .contact-form-box { padding: 24px 18px; border-radius: 20px !important; }
-  .form-row { grid-template-columns: 1fr; }
-  .info-block { padding: 16px 18px; border-radius: 14px !important; }
-
-  /* Footer */
-  .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
-  .footer-grid > *:first-child { grid-column: auto; }
-  .footer-logo-img img { height: 42px; }
-  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
-
-  /* Floating CTA */
-  .floating-cta { bottom: 14px; right: 14px; }
-  .floating-cta .btn { font-size: 0.75rem; padding: 11px 18px; }
-
-  /* Section titles */
-  .s-title { font-size: clamp(2.2rem, 10vw, 3.5rem); }
-}
-
-/* ─── RESPONSIVE — SMALL MOBILE ─── */
-@media(max-width:400px) {
-  .hero-title { font-size: 2.2rem; }
-  .areas-grid { grid-template-columns: 1fr; }
-  .hero-trust { gap: 8px; }
-  .trust-item { flex-direction: column; text-align: center; gap: 5px; }
-  .stats-grid { grid-template-columns: 1fr; }
-  .stat-item:nth-child(2) { border-right: none !important; }
-  .stat-item { border-bottom: 1px solid rgba(0,0,0,0.12) !important; }
-  .stat-item:last-child { border-bottom: none !important; }
-}
-/* ─── BUTTON RADIUS OVERRIDES ─── */
-.btn { border-radius: 0 16px 0 16px !important; }
-.btn-outline, .btn-outline-gold { border-radius: 0 16px 0 16px !important; }
-.floating-cta .btn { border-radius: 0 16px 0 16px !important; }
-.cpc-call-btn { border-radius: 0 16px 0 16px !important; }
-.hqc-submit .btn { border-radius: 0 16px 0 16px !important; }
-footer .btn { border-radius: 0 16px 0 16px !important; }
-.cta-section .btn { border-radius: 0 16px 0 16px !important; }
-.svc-link-btn { border-radius: 0 10px 0 10px; }
-
-/* ─── HERO TRUST BAR ─── */
-.hero-trust-bar {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin-top: 36px;
-  padding: 14px 22px;
-  background: rgba(0,0,0,0.35);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 8px;
-  width: fit-content;
-  flex-wrap: wrap;
-}
-.htb-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: rgba(255,255,255,0.85);
-  font-family: 'Syne', sans-serif;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  white-space: nowrap;
-}
-.htb-stars {
-  color: var(--gold);
-  font-size: 0.85rem;
-  letter-spacing: 2px;
-}
-.htb-phone {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 700;
-  transition: color 0.2s;
-}
-.htb-phone:hover { color: var(--gold); }
-.htb-text { color: rgba(255,255,255,0.8); }
-.htb-divider {
-  width: 1px;
-  height: 18px;
-  background: rgba(255,255,255,0.2);
-  flex-shrink: 0;
-}
-
-/* ─── CARD GLOW HOVER EFFECT ─── */
+.s-body { font-size: 0.97rem; font-weight: 300; line-height: 1.8; max-width: 480px; }
+.s-header-split { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: end; margin-bottom: 52px; }
+
+/* SERVICES */
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .svc-photo-card {
-  position: relative;
-  isolation: isolate;
+  position: relative; isolation: isolate;
+  border-radius: 20px; overflow: hidden;
+  min-height: 320px; display: flex; flex-direction: column; justify-content: flex-end;
+  cursor: default; box-shadow: 0 4px 24px rgba(0,0,0,0.12);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.svc-photo-card::after {
-  content: '';
-  position: absolute;
-  inset: -1px;
-  border-radius: inherit;
-  background: conic-gradient(
-    from var(--glow-angle, 0deg),
-    transparent 0%,
-    var(--lime) 10%,
-    var(--gold) 30%,
-    transparent 40%,
-    transparent 60%,
-    var(--lime) 70%,
-    transparent 80%
-  );
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  z-index: -1;
-  filter: blur(8px);
-}
-.svc-photo-card:hover::after {
-  opacity: 0.6;
-  animation: glow-spin 3s linear infinite;
-}
-.svc-photo-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 60px rgba(142,207,134,0.2);
-}
-@keyframes glow-spin {
-  to { --glow-angle: 360deg; }
-}
-@property --glow-angle {
-  syntax: '<angle>';
-  initial-value: 0deg;
-  inherits: false;
-}
-
-/* ─── PHOTO SERVICE CARDS ─── */
-.svc-photo-card {
-  background: var(--forest) !important;
-  border-radius: 20px !important;
-  overflow: hidden;
-  padding: 0 !important;
-  min-height: 340px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  cursor: default;
-  border: none !important;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
-}
+.svc-photo-card:hover { transform: translateY(-6px); box-shadow: 0 20px 56px rgba(0,0,0,0.22); }
 .svc-photo-bg {
-  position: absolute;
-  inset: 0;
+  position: absolute; inset: 0;
   background-image: var(--svc-img);
-  background-size: cover;
-  background-position: center;
-  transition: transform 0.6s ease;
-  z-index: 0;
+  background-size: cover; background-position: center;
+  transition: transform 0.6s ease; z-index: 0;
 }
-.svc-photo-card:hover .svc-photo-bg {
-  transform: scale(1.06);
-}
+.svc-photo-card:hover .svc-photo-bg { transform: scale(1.05); }
 .svc-photo-card::before {
   content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(10,22,15,0.95) 0%, rgba(10,22,15,0.6) 45%, transparent 100%);
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(10,22,15,0.95) 0%, rgba(10,22,15,0.55) 50%, transparent 100%);
   z-index: 1;
-  height: auto !important;
-  width: auto !important;
-  border-radius: 0 !important;
-  background-color: transparent !important;
-  transition: none !important;
 }
 .svc-photo-badge {
-  position: absolute;
-  top: 16px; left: 16px;
-  z-index: 3;
-  background: var(--gold);
-  color: var(--ink);
-  font-family: 'Syne', sans-serif;
-  font-size: 0.62rem;
-  font-weight: 800;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  padding: 4px 12px;
-  border-radius: 100px;
+  position: absolute; top: 14px; left: 14px; z-index: 3;
+  background: var(--gold); color: var(--ink);
+  font-family: 'Syne', sans-serif; font-size: 0.6rem; font-weight: 800;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  padding: 4px 11px; border-radius: 100px;
 }
 .svc-photo-content {
-  position: relative;
-  z-index: 2;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  position: relative; z-index: 2;
+  padding: 22px; display: flex; flex-direction: column; gap: 6px;
 }
 .svc-icon-svg {
-  width: 40px; height: 40px;
-  border-radius: 10px;
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.15);
+  width: 38px; height: 38px; border-radius: 10px;
+  background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15);
   display: flex; align-items: center; justify-content: center;
-  color: var(--lime);
-  margin-bottom: 4px;
-  flex-shrink: 0;
+  color: var(--lime); margin-bottom: 2px; flex-shrink: 0;
 }
-.svc-photo-card .svc-name {
-  color: #fff !important;
-  font-size: 1.1rem;
-}
-.svc-photo-card .svc-desc {
-  color: rgba(255,255,255,0.65) !important;
-  font-size: 0.84rem;
-  line-height: 1.65;
-}
+.svc-name { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: #fff; }
+.svc-desc { font-size: 0.82rem; font-weight: 300; color: rgba(255,255,255,0.62); line-height: 1.6; }
 .svc-link-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-top: 8px;
-  font-family: 'Syne', sans-serif;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--gold);
-  text-decoration: none;
-  transition: gap 0.2s, color 0.2s;
-  width: fit-content;
+  display: inline-flex; align-items: center; gap: 6px; margin-top: 6px;
+  font-family: 'Syne', sans-serif; font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold);
+  transition: gap 0.2s, color 0.2s; width: fit-content;
 }
 .svc-link-btn:hover { gap: 10px; color: var(--gold-lt); }
 
-/* ─── CONTACT PROFILE CARD ─── */
+/* ABOUT */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+.about-img-wrap { position: relative; padding-bottom: 28px; }
+.about-img-frame { border-radius: 20px; overflow: hidden; aspect-ratio: 4/3; background: var(--panel2); }
+.about-img-frame img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+.about-img-frame:hover img { transform: scale(1.04); }
+.about-badge-card {
+  position: absolute; bottom: 0; right: 0;
+  background: var(--gold); color: var(--ink);
+  padding: 16px 20px; border-radius: 14px; text-align: center;
+  box-shadow: 0 12px 40px rgba(200,160,74,0.35);
+}
+.about-badge-num { font-family: 'Bebas Neue', sans-serif; font-size: 2.6rem; line-height: 1; display: block; }
+.about-badge-sub { font-family: 'Syne', sans-serif; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.65; display: block; margin-top: 2px; }
+.about-highlight {
+  background: rgba(200,160,74,0.1); border-left: 3px solid var(--gold-dk);
+  border-radius: 0 6px 6px 0; padding: 13px 16px; margin: 18px 0 24px;
+  font-size: 0.88rem; color: #5a7a6a; font-style: italic; line-height: 1.7;
+}
+.pillars { display: flex; flex-direction: column; margin-top: 22px; }
+.pillar { display: flex; gap: 13px; padding: 15px 0; border-bottom: 1px solid rgba(26,51,38,0.1); }
+.pillar:last-child { border-bottom: none; }
+.pillar-num { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; color: var(--gold-dk); line-height: 1; flex-shrink: 0; min-width: 2rem; }
+.pillar-title { font-family: 'Syne', sans-serif; font-size: 0.84rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--forest); margin-bottom: 2px; }
+.pillar-body { font-size: 0.82rem; font-weight: 300; color: #5a7a6a; line-height: 1.65; }
+
+/* STATS */
+.stats-strip { background: var(--bg-gold); }
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+.stat-item { padding: 40px 24px; text-align: center; border-right: 1px solid rgba(15,31,21,0.12); }
+.stat-item:last-child { border-right: none; }
+.stat-num { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.2rem, 3.5vw, 3.2rem); color: var(--ink); line-height: 1; margin-bottom: 4px; }
+.stat-label { font-family: 'Syne', sans-serif; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(15,31,21,0.5); }
+
+/* FAQ */
+.faq-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 72px; align-items: start; }
+.faq-list { display: flex; flex-direction: column; border-radius: 16px; overflow: hidden; border: 1px solid rgba(200,160,74,0.2); }
+.faq-item { border-bottom: 1px solid rgba(200,160,74,0.15); }
+.faq-item:last-child { border-bottom: none; }
+.faq-q {
+  width: 100%; background: none; border: none; text-align: left;
+  padding: 17px 20px; cursor: pointer;
+  display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+  font-family: 'Syne', sans-serif; font-size: 0.88rem; font-weight: 600;
+  color: var(--forest); transition: color var(--tr);
+}
+.faq-q:hover { color: var(--gold-dk); }
+.faq-arrow { width: 22px; height: 22px; border-radius: 50%; background: rgba(26,51,38,0.07); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--sage); font-size: 1rem; transition: transform 0.3s, background 0.2s; }
+.faq-item.open .faq-arrow { transform: rotate(45deg); background: var(--gold-dk); color: #fff; }
+.faq-a { font-size: 0.85rem; font-weight: 300; color: #5a7a6a; line-height: 1.75; max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; padding: 0 20px; }
+.faq-item.open .faq-a { max-height: 260px; padding-bottom: 17px; }
+
+/* CTA */
+.cta-section { background: var(--bg-green); position: relative; overflow: hidden; padding: 76px 0; }
+.cta-section::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(200,160,74,0.14) 0%, transparent 60%);
+  pointer-events: none;
+}
+.cta-inner { display: grid; grid-template-columns: 1fr auto; gap: 4rem; align-items: center; position: relative; z-index: 1; }
+.cta-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.4rem, 5vw, 5rem); line-height: 0.92; letter-spacing: 0.02em; text-transform: uppercase; color: #fff; }
+.cta-sub { font-size: 0.97rem; font-weight: 300; color: rgba(244,239,229,0.55); margin-top: 1rem; max-width: 440px; line-height: 1.65; }
+
+/* CONTACT */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+.contact-form-box {
+  background: #fff; border: 1px solid rgba(26,51,38,0.09);
+  border-top: 3px solid var(--gold); border-radius: 22px; padding: 36px 30px;
+  box-shadow: 0 4px 40px rgba(26,51,38,0.08);
+}
+.form-title { font-family: 'Syne', sans-serif; font-size: 0.86rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--forest); margin-bottom: 22px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.fg-light { display: flex; flex-direction: column; gap: 5px; margin-bottom: 10px; }
+.fg-light label { font-family: 'Syne', sans-serif; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(26,51,38,0.4); }
+.fg-light input, .fg-light select, .fg-light textarea {
+  background: var(--bg-white); border: 1px solid rgba(26,51,38,0.13);
+  border-radius: 10px; padding: 10px 13px; color: var(--forest);
+  font-family: 'DM Sans', sans-serif; font-size: 0.88rem; width: 100%; outline: none;
+  transition: border-color var(--tr); -webkit-appearance: none; appearance: none;
+}
+.fg-light input::placeholder, .fg-light textarea::placeholder { color: rgba(26,51,38,0.22); }
+.fg-light input:focus, .fg-light select:focus, .fg-light textarea:focus { border-color: var(--forest); box-shadow: 0 0 0 3px rgba(26,51,38,0.07); }
+.fg-light select option { background: #fff; color: var(--forest); }
+.fg-light textarea { min-height: 100px; resize: vertical; }
+.form-full { grid-column: 1 / -1; }
+
+/* CONTACT CARD */
 .contact-profile-card {
-  background: #fff;
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 4px 40px rgba(26,51,38,0.1);
-  border: 1px solid rgba(26,51,38,0.08);
+  background: #fff; border-radius: 22px; overflow: hidden;
+  box-shadow: 0 4px 40px rgba(26,51,38,0.1); border: 1px solid rgba(26,51,38,0.08);
 }
 .cpc-header {
-  background: var(--forest);
-  padding: 28px 28px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
+  background: var(--forest); padding: 24px 26px;
+  display: flex; align-items: center; justify-content: space-between; gap: 14px;
 }
 .cpc-avatar {
-  width: 64px; height: 64px;
-  border-radius: 16px;
-  overflow: hidden;
-  border: 2px solid rgba(255,255,255,0.15);
-  flex-shrink: 0;
-  background: var(--pine);
-  display: flex; align-items: center; justify-content: center;
+  width: 58px; height: 58px; border-radius: 14px; overflow: hidden;
+  border: 2px solid rgba(255,255,255,0.15); flex-shrink: 0;
+  background: var(--pine); display: flex; align-items: center; justify-content: center;
 }
 .cpc-avatar img { width: 100%; height: 100%; object-fit: contain; padding: 6px; }
 .cpc-status {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  font-family: 'Syne', sans-serif;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  color: rgba(255,255,255,0.65);
+  display: flex; align-items: center; gap: 7px;
+  font-family: 'Syne', sans-serif; font-size: 0.7rem; font-weight: 600;
+  letter-spacing: 0.08em; color: rgba(255,255,255,0.6);
 }
-.cpc-dot {
-  width: 8px; height: 8px;
-  border-radius: 50%;
-  background: var(--lime);
-  animation: pulse 2s infinite;
-  flex-shrink: 0;
-}
-.cpc-blocks {
-  padding: 20px 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
-.cpc-block {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-  padding: 16px 0;
-  border-bottom: 1px solid rgba(26,51,38,0.07);
-  transition: background 0.2s;
-}
+.cpc-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--lime); animation: pulse 2s infinite; flex-shrink: 0; }
+.cpc-blocks { padding: 16px 22px; display: flex; flex-direction: column; }
+.cpc-block { display: flex; align-items: flex-start; gap: 13px; padding: 14px 0; border-bottom: 1px solid rgba(26,51,38,0.07); }
 .cpc-block:last-child { border-bottom: none; }
 .cpc-block-icon {
-  width: 34px; height: 34px;
-  border-radius: 10px;
-  background: rgba(26,51,38,0.06);
-  border: 1px solid rgba(26,51,38,0.08);
+  width: 32px; height: 32px; border-radius: 9px;
+  background: rgba(26,51,38,0.06); border: 1px solid rgba(26,51,38,0.08);
   display: flex; align-items: center; justify-content: center;
-  color: var(--forest);
-  flex-shrink: 0;
-  margin-top: 1px;
+  color: var(--forest); flex-shrink: 0; margin-top: 1px;
 }
-.cpc-block-label {
-  font-family: 'Syne', sans-serif;
-  font-size: 0.62rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--gold-dk);
-  margin-bottom: 3px;
-}
-.cpc-block-val {
-  font-size: 0.92rem;
-  font-weight: 500;
-  color: var(--forest);
-  line-height: 1.55;
-}
+.cpc-block-label { font-family: 'Syne', sans-serif; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dk); margin-bottom: 3px; }
+.cpc-block-val { font-size: 0.88rem; font-weight: 500; color: var(--forest); line-height: 1.5; }
 .cpc-block-val a { color: var(--forest); transition: color 0.2s; }
 .cpc-block-val a:hover { color: var(--gold-dk); }
 .cpc-call-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin: 0 24px 24px;
-  padding: 14px;
-  background: var(--lime);
-  color: var(--ink);
-  border-radius: 100px !important;
-  font-family: 'Syne', sans-serif;
-  font-size: 0.8rem;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: all 0.2s;
+  display: flex; align-items: center; justify-content: center; gap: 9px;
+  margin: 0 22px 22px; padding: 13px;
+  background: var(--lime); color: var(--ink); border-radius: 0 14px 0 14px;
+  font-family: 'Syne', sans-serif; font-size: 0.78rem; font-weight: 800;
+  letter-spacing: 0.14em; text-transform: uppercase; transition: all 0.2s;
 }
-.cpc-call-btn:hover { background: var(--lime-dk); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(142,207,134,0.4); }
+.cpc-call-btn:hover { background: var(--lime-dk); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(142,207,134,0.35); }
 
-/* ─── FOOTER MAP ─── */
-.footer-map-wrap {
-  position: relative;
-  height: 260px;
-  overflow: hidden;
-}
-#footerMap {
-  width: 100%;
-  height: 100%;
-  filter: grayscale(30%) brightness(0.85);
-}
-.footer-map-pin {
-  position: absolute;
-  bottom: 16px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--forest);
-  color: var(--lime);
-  font-family: 'Syne', sans-serif;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  padding: 8px 18px;
-  border-radius: 100px;
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
-  z-index: 500;
-  white-space: nowrap;
-}
-
-/* ─── FOOTER EXPANDED ─── */
+/* FOOTER */
+footer { background: #080f0b; border-top: 1px solid var(--border); padding: 52px 0 24px; }
 .footer-cta-strip {
-  background: var(--pine);
-  border-bottom: 1px solid rgba(142,207,134,0.1);
-  padding: 28px 0;
+  background: var(--pine); border-bottom: 1px solid rgba(142,207,134,0.1); padding: 24px 0;
 }
 .footer-cta-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  flex-wrap: wrap;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 20px; flex-wrap: wrap;
 }
-.footer-cta-label {
-  font-family: 'Syne', sans-serif;
-  font-size: 1rem;
-  font-weight: 800;
-  color: var(--cream);
-  margin-bottom: 3px;
-}
-.footer-cta-sub {
-  font-size: 0.85rem;
-  color: rgba(245,240,232,0.5);
-  font-weight: 300;
-}
+.footer-cta-label { font-family: 'Syne', sans-serif; font-size: 0.97rem; font-weight: 800; color: var(--cream); margin-bottom: 2px; }
+.footer-cta-sub { font-size: 0.82rem; color: rgba(245,240,232,0.45); font-weight: 300; }
 .footer-cta-actions { display: flex; gap: 10px; flex-wrap: wrap; }
-
-.footer-main { padding: 56px 0 40px; }
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1.8fr 1fr 1fr 1fr;
-  gap: 3.5rem;
-  margin-bottom: 0;
-  padding-bottom: 0;
-  border-bottom: none;
-}
-.footer-brand-col {}
-.footer-badges {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-top: 20px;
-}
+.footer-main { padding: 48px 0 36px; }
+.footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 3rem; }
+.footer-logo-img { margin-bottom: 14px; }
+.footer-logo-img img { height: 48px; width: auto; }
+.footer-desc { font-size: 0.84rem; font-weight: 300; color: rgba(244,239,229,0.28); line-height: 1.85; max-width: 260px; margin-bottom: 18px; }
+.footer-badges { display: flex; flex-direction: column; gap: 7px; }
 .footer-badge-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(142,207,134,0.15);
-  border-radius: 6px;
-  padding: 7px 12px;
-  font-family: 'Syne', sans-serif;
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  color: rgba(245,240,232,0.55);
-  width: fit-content;
+  display: inline-flex; align-items: center; gap: 7px;
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(142,207,134,0.14);
+  border-radius: 6px; padding: 6px 11px;
+  font-family: 'Syne', sans-serif; font-size: 0.68rem; font-weight: 600;
+  letter-spacing: 0.1em; color: rgba(245,240,232,0.5); width: fit-content;
 }
 .footer-badge-stars { color: var(--gold); letter-spacing: 1px; }
-
-.footer-contact-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.footer-contact-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  font-size: 0.85rem;
-  color: rgba(245,240,232,0.4);
-  line-height: 1.5;
-}
+.footer-col-title { font-family: 'Syne', sans-serif; font-size: 0.66rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.footer-links a { font-size: 0.83rem; font-weight: 300; color: rgba(244,239,229,0.28); transition: color var(--tr); }
+.footer-links a:hover { color: var(--lime); }
+.footer-contact-list { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+.footer-contact-list li { display: flex; align-items: flex-start; gap: 9px; font-size: 0.83rem; color: rgba(245,240,232,0.35); line-height: 1.5; }
 .footer-contact-list li svg { flex-shrink: 0; margin-top: 2px; color: var(--gold); }
-.footer-contact-list a { color: rgba(245,240,232,0.4); transition: color 0.2s; }
+.footer-contact-list a { color: rgba(245,240,232,0.35); transition: color 0.2s; }
 .footer-contact-list a:hover { color: var(--lime); }
+.footer-bottom-bar { border-top: 1px solid rgba(142,207,134,0.08); padding: 16px 0; }
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.footer-copy { font-size: 0.75rem; color: rgba(244,239,229,0.18); }
+.footer-dev { font-family: 'Syne', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(244,239,229,0.16); transition: color var(--tr); }
+.footer-dev:hover { color: var(--gold); }
 
-.footer-socials { display: flex; gap: 8px; margin-top: 14px; }
-.footer-social-btn {
-  width: 36px; height: 36px;
-  border-radius: 8px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(142,207,134,0.12);
-  display: flex; align-items: center; justify-content: center;
-  color: rgba(245,240,232,0.45);
-  transition: all 0.2s;
-  flex-shrink: 0;
-}
-.footer-social-btn:hover { background: var(--forest); border-color: var(--lime); color: var(--lime); }
+/* FLOATING CTA */
+.floating-cta { position: fixed; bottom: 22px; right: 22px; z-index: 150; display: none; }
+.floating-cta.visible { display: block; }
+.floating-cta .btn { box-shadow: 0 8px 32px rgba(200,160,74,0.4); animation: pulse-btn 2.5s ease-in-out infinite; }
+@keyframes pulse-btn { 0%,100%{box-shadow:0 8px 32px rgba(200,160,74,0.4);} 50%{box-shadow:0 8px 48px rgba(200,160,74,0.65);} }
 
-.footer-bottom-bar {
-  border-top: 1px solid rgba(142,207,134,0.08);
-  padding: 18px 0;
-}
-.footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-.footer-bottom-right { display: flex; align-items: center; gap: 20px; }
+/* REVEAL */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.22,0.61,0.36,1); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.rd1{transition-delay:0.1s;} .rd2{transition-delay:0.2s;} .rd3{transition-delay:0.3s;} .rd4{transition-delay:0.4s;}
 
-/* Mobile trust bar */
-@media(max-width:768px) {
-  .hero-trust-bar { gap: 12px; padding: 12px 16px; }
-  .htb-divider { display: none; }
-  .htb-item { font-size: 0.72rem; }
-  .footer-cta-inner { flex-direction: column; align-items: flex-start; }
+/* ── RESPONSIVE ── */
+@media(max-width:1100px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 36px; }
+  .hero-quote-card { max-width: 520px; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-grid { grid-template-columns: 1fr; gap: 52px; }
+  .faq-grid { grid-template-columns: 1fr; gap: 40px; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .cta-inner { grid-template-columns: 1fr; text-align: center; }
+  .s-header-split { grid-template-columns: 1fr; gap: 1.2rem; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
-  .footer-brand-col { grid-column: 1 / -1; }
-  .footer-bottom-right { flex-direction: column; gap: 6px; align-items: flex-end; }
+  .footer-grid > *:first-child { grid-column: 1 / -1; }
 }
-@media(max-width:480px) {
-  .footer-grid { grid-template-columns: 1fr; }
+
+@media(max-width:768px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .nav-right .btn-outline-gold { display: none; }
+  .nav-inner { padding: 0 18px; }
+  section { padding: 56px 0; }
+  .container { padding: 0 18px; }
+  #hero { align-items: flex-start; }
+  .hero-inner { padding: 88px 18px 56px; }
+  .hero-title { font-size: clamp(2.3rem, 10vw, 3.2rem); }
+  .hero-sub { font-size: 0.93rem; margin: 14px 0 22px; }
+  .hero-actions { flex-direction: column; gap: 9px; }
+  .hero-actions .btn { width: 100%; justify-content: center; }
+  .hero-trust-bar { gap: 10px; padding: 11px 15px; }
+  .htb-divider { display: none; }
+  .hero-quote-card { max-width: 100%; }
+  .services-grid { grid-template-columns: 1fr; gap: 12px; }
+  .about-img-wrap { padding-bottom: 24px; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .stat-item { padding: 26px 16px; border-right: none; border-bottom: 1px solid rgba(15,31,21,0.12); }
+  .stat-item:nth-child(2) { border-right: 1px solid rgba(15,31,21,0.12) !important; }
+  .stat-item:last-child { border-bottom: none; }
+  .cta-section { padding: 56px 0; }
+  .cta-inner { gap: 24px; }
+  .cta-inner .btn-gold { width: 100%; justify-content: center; }
+  .contact-form-box { padding: 22px 18px; }
+  .form-row { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 1.8rem; }
+  .footer-grid > *:first-child { grid-column: auto; }
+  .footer-cta-inner { flex-direction: column; align-items: flex-start; }
   .footer-cta-actions { flex-direction: column; }
   .footer-cta-actions .btn { width: 100%; justify-content: center; }
+  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+  .faq-q { font-size: 0.83rem; padding: 15px 18px; }
+  .s-title { font-size: clamp(2.2rem, 9vw, 3.2rem); }
+}
+
+@media(max-width:400px) {
+  .stats-grid { grid-template-columns: 1fr; }
+  .stat-item { border-right: none !important; }
 }
 </style>
 </head>
@@ -1289,7 +534,7 @@ footer .btn { border-radius: 0 16px 0 16px !important; }
 <!-- Floating CTA -->
 <div class="floating-cta" id="floatCta">
   <a href="#contact" class="btn btn-gold">
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.37a16 16 0 0 0 5.72 5.72l1.37-1.37a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.37a16 16 0 0 0 5.72 5.72l1.37-1.37a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
     Free Quote
   </a>
 </div>
@@ -1297,15 +542,14 @@ footer .btn { border-radius: 0 16px 0 16px !important; }
 <!-- Mobile Drawer -->
 <div class="mobile-drawer" id="mobileDrawer">
   <button class="mobile-close" id="mobileClose">&times;</button>
-  <img src="https://github.com/user-attachments/assets/da443841-6952-4642-9083-924ba550798c" alt="DGO Green" style="height:48px;width:auto;margin-bottom:1rem;opacity:0.9;" />
+  <img src="https://github.com/user-attachments/assets/da443841-6952-4642-9083-924ba550798c" alt="DGO Green" style="height:44px;width:auto;margin-bottom:0.8rem;opacity:0.9;" />
   <a href="#services" onclick="closeDrawer()">Services</a>
   <a href="#about" onclick="closeDrawer()">About</a>
-  <a href="#process" onclick="closeDrawer()">Process</a>
   <a href="#faq" onclick="closeDrawer()">FAQ</a>
   <a href="#contact" onclick="closeDrawer()" style="color:var(--gold)">Get a Quote</a>
 </div>
 
-<!-- Announce Bar -->
+<!-- Announce -->
 <div class="announce">
   <a href="#contact">⭐ 100% Satisfaction Guarantee &nbsp;·&nbsp; Snohomish County, WA &nbsp;·&nbsp; Free Estimates Always</a>
 </div>
@@ -1313,69 +557,60 @@ footer .btn { border-radius: 0 16px 0 16px !important; }
 <!-- Nav -->
 <nav id="mainNav">
   <div class="nav-inner">
-    <a href="#" class="nav-logo-img">
-      <img src="https://github.com/user-attachments/assets/da443841-6952-4642-9083-924ba550798c" alt="DGO Green Landscaping" />
+    <a href="#">
+      <img src="https://github.com/user-attachments/assets/da443841-6952-4642-9083-924ba550798c" alt="DGO Green Landscaping" style="height:40px;width:auto;" />
     </a>
     <ul class="nav-links">
       <li><a href="#services">Services</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#process">Process</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
     <div class="nav-right">
-      <a href="tel:+14254564640" class="btn btn-outline-gold" style="padding:10px 22px;font-size:0.72rem;">Call Now</a>
-      <a href="#contact" class="btn btn-gold" style="padding:10px 22px;font-size:0.72rem;">Free Estimate</a>
+      <a href="tel:+14254564640" class="btn btn-outline-gold" style="padding:10px 20px;font-size:0.7rem;">Call Now</a>
+      <a href="#contact" class="btn btn-gold" style="padding:10px 20px;font-size:0.7rem;">Free Estimate</a>
       <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
     </div>
   </div>
 </nav>
 
-<!-- ─── HERO ─── -->
+<!-- HERO -->
 <section id="hero">
   <div class="hero-video-wrap">
-    <video
-      autoplay
-      muted
-      loop
-      playsinline
-      webkit-playsinline
-      preload="auto"
-    >
+    <video autoplay muted loop playsinline webkit-playsinline preload="auto">
       <source src="https://ivhxwbmlmqhqncbkjuou.supabase.co/storage/v1/object/public/dgo%20video/Untitled%20(1).mp4" type="video/mp4" />
     </video>
   </div>
   <div class="hero-overlay"></div>
-
   <div class="hero-inner">
     <div class="hero-grid">
-      <!-- Left col -->
       <div>
-        <h1 class="display hero-title">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          <span class="hero-badge-text">Snohomish County's Trusted Crew</span>
+        </div>
+        <h1 class="hero-title">
           Look More<br><span class="g">Professional.</span><br><span class="gd">Get More Calls.</span>
         </h1>
         <p class="hero-sub">DGO Green transforms outdoor spaces across Snohomish County. Custom landscaping, hardscaping, and maintenance that makes your property unforgettable.</p>
         <div class="hero-actions">
-          <a href="#contact" class="btn btn-gold" style="font-size:0.85rem;padding:16px 32px;">Get a Free Estimate</a>
-          <a href="#services" class="btn btn-outline" style="font-size:0.85rem;padding:16px 32px;">See Our Work</a>
+          <a href="#contact" class="btn btn-gold" style="font-size:0.84rem;padding:15px 30px;">Get a Free Estimate</a>
+          <a href="#services" class="btn btn-outline" style="font-size:0.84rem;padding:15px 30px;">See Our Work</a>
         </div>
         <div class="hero-trust-bar">
-          <div class="htb-item">
-            <span class="htb-stars">★★★★★</span>
-            <span class="htb-text">5-Star Rated</span>
-          </div>
+          <div class="htb-item"><span class="htb-stars">★★★★★</span><span>5-Star Rated</span></div>
           <div class="htb-divider"></div>
           <div class="htb-item">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.37a16 16 0 0 0 5.72 5.72l1.37-1.37a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.37a16 16 0 0 0 5.72 5.72l1.37-1.37a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             <a href="tel:+14254564640" class="htb-phone">(425) 456-4640</a>
           </div>
           <div class="htb-divider"></div>
           <div class="htb-item">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <span class="htb-text">Licensed &amp; Insured</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Licensed &amp; Insured
           </div>
         </div>
       </div>
-      <!-- Right col — Quote card -->
+      <!-- Quote card -->
       <div class="hero-quote-card">
         <div class="hqc-head">
           <h3>Get Your Free Estimate</h3>
@@ -1404,7 +639,7 @@ footer .btn { border-radius: 0 16px 0 16px !important; }
               <button type="submit" class="btn btn-gold">Send My Request</button>
             </div>
           </form>
-          <p class="hqc-note">Free estimate, no obligation. We call back fast.</p>
+          <p class="hqc-note">Free estimate. No obligation. We call back fast.</p>
         </div>
       </div>
     </div>
@@ -1423,10 +658,7 @@ footer .btn { border-radius: 0 16px 0 16px !important; }
     <div class="marquee-item"><span class="marquee-dot"></span><span class="marquee-text">Landscape Lighting</span></div>
     <div class="marquee-item"><span class="marquee-dot"></span><span class="marquee-text">Paver Patios</span></div>
     <div class="marquee-item"><span class="marquee-dot"></span><span class="marquee-text">Seasonal Clean-Ups</span></div>
-    <div class="marquee-item"><span class="marquee-dot"></span><span class="marquee-text">Sod Installation</span></div>
-    <div class="marquee-item"><span class="marquee-dot"></span><span class="marquee-text">Bark &amp; Mulch</span></div>
     <div class="marquee-item"><span class="marquee-dot"></span><span class="marquee-text">Fencing &amp; Decks</span></div>
-    <!-- repeat for seamless loop -->
     <div class="marquee-item"><span class="marquee-dot"></span><span class="marquee-text">Lawn Care</span></div>
     <div class="marquee-item"><span class="marquee-dot"></span><span class="marquee-text">Hardscaping</span></div>
     <div class="marquee-item"><span class="marquee-dot"></span><span class="marquee-text">Irrigation Systems</span></div>
@@ -1436,113 +668,87 @@ footer .btn { border-radius: 0 16px 0 16px !important; }
     <div class="marquee-item"><span class="marquee-dot"></span><span class="marquee-text">Landscape Lighting</span></div>
     <div class="marquee-item"><span class="marquee-dot"></span><span class="marquee-text">Paver Patios</span></div>
     <div class="marquee-item"><span class="marquee-dot"></span><span class="marquee-text">Seasonal Clean-Ups</span></div>
-    <div class="marquee-item"><span class="marquee-dot"></span><span class="marquee-text">Sod Installation</span></div>
-    <div class="marquee-item"><span class="marquee-dot"></span><span class="marquee-text">Bark &amp; Mulch</span></div>
     <div class="marquee-item"><span class="marquee-dot"></span><span class="marquee-text">Fencing &amp; Decks</span></div>
   </div>
 </div>
 
-<!-- ─── SERVICES ─── -->
+<!-- SERVICES -->
 <section class="s-bg-white" id="services">
   <div class="container">
-    <div class="s-header">
+    <div class="s-header-split">
       <div>
-        <p class="label reveal">What We Do</p>
+        <p class="label reveal" style="color:var(--gold-dk);">--What We Do</p>
         <h2 class="s-title reveal rd1" style="color:var(--forest);">Our<br><span style="color:var(--lime-dk)">Services</span></h2>
       </div>
-      <p class="s-body reveal rd2">We specialize in hardscaping, fencing, and paving — the projects that add real lasting value to your property. Plus full landscaping and maintenance to keep everything looking sharp.</p>
+      <p class="s-body reveal rd2" style="color:#5a7a6a;">Hardscaping, fencing, paving, and full landscaping maintenance. Projects that add real value and keep your property looking sharp year-round.</p>
     </div>
     <div class="services-grid">
-      <div class="svc-card svc-photo-card reveal" style="--svc-img:url('https://github.com/user-attachments/assets/4054fd5c-9861-4989-95e6-6708443fbfeb')">
+      <div class="svc-photo-card reveal" style="--svc-img:url('https://github.com/user-attachments/assets/4054fd5c-9861-4989-95e6-6708443fbfeb')">
         <div class="svc-photo-bg"></div>
         <div class="svc-photo-badge">Featured</div>
         <div class="svc-photo-content">
-          <div class="svc-icon-svg">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-          </div>
+          <div class="svc-icon-svg"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
           <div class="svc-name">Hardscaping</div>
-          <p class="svc-desc">Pavers, patios, retaining walls, walkways, and outdoor living areas. Built to handle every WA winter and look great for decades.</p>
-          <a href="#contact" class="svc-link-btn">Get Quote
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
+          <p class="svc-desc">Pavers, patios, retaining walls, walkways, and outdoor living areas built to handle every WA winter.</p>
+          <a href="#contact" class="svc-link-btn">Get Quote <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
-      <div class="svc-card svc-photo-card reveal rd1" style="--svc-img:url('https://github.com/user-attachments/assets/48b98fcf-cde9-48ba-9932-e83c4b620b5f')">
+      <div class="svc-photo-card reveal rd1" style="--svc-img:url('https://github.com/user-attachments/assets/48b98fcf-cde9-48ba-9932-e83c4b620b5f')">
         <div class="svc-photo-bg"></div>
         <div class="svc-photo-content">
-          <div class="svc-icon-svg">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-          </div>
+          <div class="svc-icon-svg"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
           <div class="svc-name">Landscape Design</div>
-          <p class="svc-desc">From concept to full plan. We design functional, beautiful yards that work with your property, not against it.</p>
-          <a href="#contact" class="svc-link-btn">Get Quote
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
+          <p class="svc-desc">From concept to full plan. We design functional, beautiful yards that work with your property.</p>
+          <a href="#contact" class="svc-link-btn">Get Quote <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
-      <div class="svc-card svc-photo-card reveal rd2" style="--svc-img:url('https://github.com/user-attachments/assets/76434f50-5e05-4c3a-a0fa-a3e1753c519a')">
+      <div class="svc-photo-card reveal rd2" style="--svc-img:url('https://github.com/user-attachments/assets/76434f50-5e05-4c3a-a0fa-a3e1753c519a')">
         <div class="svc-photo-bg"></div>
         <div class="svc-photo-content">
-          <div class="svc-icon-svg">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12"/><path d="M5 3a7 7 0 0 0 7 7 7 7 0 0 0 7-7"/><path d="M5 11a7 7 0 0 0 7 7 7 7 0 0 0 7-7"/><path d="M3 21h18"/></svg>
-          </div>
+          <div class="svc-icon-svg"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12"/><path d="M5 3a7 7 0 0 0 7 7 7 7 0 0 0 7-7"/><path d="M5 11a7 7 0 0 0 7 7 7 7 0 0 0 7-7"/><path d="M3 21h18"/></svg></div>
           <div class="svc-name">Lawn Care &amp; Maintenance</div>
-          <p class="svc-desc">Mowing, edging, fertilization, aeration, seasonal clean-ups. Weekly and bi-weekly plans available year-round.</p>
-          <a href="#contact" class="svc-link-btn">Get Quote
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
+          <p class="svc-desc">Mowing, edging, fertilization, aeration, seasonal clean-ups. Weekly and bi-weekly plans available.</p>
+          <a href="#contact" class="svc-link-btn">Get Quote <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
-      <div class="svc-card svc-photo-card reveal" style="--svc-img:url('https://github.com/user-attachments/assets/730ec146-da20-4021-a476-710eae936a6b')">
+      <div class="svc-photo-card reveal" style="--svc-img:url('https://github.com/user-attachments/assets/730ec146-da20-4021-a476-710eae936a6b')">
         <div class="svc-photo-bg"></div>
         <div class="svc-photo-content">
-          <div class="svc-icon-svg">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8C8 10 5.9 16.17 3.82 22"/><path d="M9.5 8c1 4 4 7 9 8"/></svg>
-          </div>
+          <div class="svc-icon-svg"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8C8 10 5.9 16.17 3.82 22"/><path d="M9.5 8c1 4 4 7 9 8"/></svg></div>
           <div class="svc-name">Tree &amp; Shrub Care</div>
-          <p class="svc-desc">Pruning, shaping, planting, and removals. We keep your trees and shrubs healthy and your yard looking intentional.</p>
-          <a href="#contact" class="svc-link-btn">Get Quote
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
+          <p class="svc-desc">Pruning, shaping, planting, and removals. Healthy trees, intentional yards.</p>
+          <a href="#contact" class="svc-link-btn">Get Quote <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
-      <div class="svc-card svc-photo-card reveal rd1" style="--svc-img:url('https://github.com/user-attachments/assets/aedd944c-961e-4a47-a675-032c9ff2963e')">
+      <div class="svc-photo-card reveal rd1" style="--svc-img:url('https://github.com/user-attachments/assets/aedd944c-961e-4a47-a675-032c9ff2963e')">
         <div class="svc-photo-bg"></div>
         <div class="svc-photo-content">
-          <div class="svc-icon-svg">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20z"/><path d="M12 8v4l3 3"/></svg>
-          </div>
+          <div class="svc-icon-svg"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M12 8v4l3 3"/></svg></div>
           <div class="svc-name">Irrigation Systems</div>
-          <p class="svc-desc">Smart watering design, install, and tune-ups. Keep your lawn green and your water bill low all season.</p>
-          <a href="#contact" class="svc-link-btn">Get Quote
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
+          <p class="svc-desc">Smart watering design, install, and tune-ups. Green lawn, low water bill.</p>
+          <a href="#contact" class="svc-link-btn">Get Quote <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
-      <div class="svc-card svc-photo-card reveal rd2" style="--svc-img:url('https://github.com/user-attachments/assets/db3f6811-4055-45cb-ba4f-655d40054f89')">
+      <div class="svc-photo-card reveal rd2" style="--svc-img:url('https://github.com/user-attachments/assets/db3f6811-4055-45cb-ba4f-655d40054f89')">
         <div class="svc-photo-bg"></div>
         <div class="svc-photo-content">
-          <div class="svc-icon-svg">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-          </div>
+          <div class="svc-icon-svg"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></div>
           <div class="svc-name">Landscape Lighting</div>
           <p class="svc-desc">Path, accent, and security lighting that extends your outdoor time and makes your property stand out at night.</p>
-          <a href="#contact" class="svc-link-btn">Get Quote
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
+          <a href="#contact" class="svc-link-btn">Get Quote <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─── ABOUT ─── -->
+<!-- ABOUT -->
 <section class="s-bg-gold-pale" id="about">
   <div class="container">
     <div class="about-grid">
       <div class="about-img-wrap reveal">
         <div class="about-img-frame">
-          <img src="https://github.com/user-attachments/assets/b31b3cbf-3c31-4b54-b70f-25b169fb85ad" alt="DGO Green Landscaping crew" loading="lazy" />
+          <img src="https://github.com/user-attachments/assets/b31b3cbf-3c31-4b54-b70f-25b169fb85ad" alt="DGO Green crew" loading="lazy" />
         </div>
         <div class="about-badge-card">
           <span class="about-badge-num">10+</span>
@@ -1550,17 +756,17 @@ footer .btn { border-radius: 0 16px 0 16px !important; }
         </div>
       </div>
       <div>
-        <p class="label reveal">Our Story</p>
-        <h2 class="s-title reveal rd1" style="font-size:clamp(2.5rem,5vw,5rem);margin-bottom:22px;color:var(--forest);">Family Built.<br><span style="color:var(--forest)">Community</span><br><span style="color:var(--gold-dk)">Driven.</span></h2>
-        <p style="font-size:1rem;font-weight:300;color:var(--on-white-muted);line-height:1.8;margin-bottom:14px;" class="reveal rd2">DGO Green was founded by our father with a vision to serve the community. A decade later, we've grown into a full-service landscaping operation — but the philosophy stays the same: treat every property like it's ours.</p>
-        <p style="font-size:1rem;font-weight:300;color:var(--on-white-muted);line-height:1.8;" class="reveal rd2">We don't lowball and cut corners. We show you what's actually needed and deliver it right the first time. No hidden fees, no surprise charges on invoice day.</p>
+        <p class="label reveal" style="color:var(--gold-dk);">--Our Story</p>
+        <h2 class="s-title reveal rd1" style="color:var(--forest);margin-bottom:20px;">Family Built.<br><span style="color:var(--gold-dk)">Community Driven.</span></h2>
+        <p style="font-size:0.97rem;font-weight:300;color:#5a7a6a;line-height:1.8;margin-bottom:12px;" class="reveal rd2">DGO Green was founded by our father with a vision to serve the community. A decade later, we've grown into a full-service landscaping operation, but the philosophy stays the same: treat every property like it's ours.</p>
+        <p style="font-size:0.97rem;font-weight:300;color:#5a7a6a;line-height:1.8;" class="reveal rd2">We don't lowball and cut corners. We show you what's actually needed and deliver it right the first time. No hidden fees, no surprise charges on invoice day.</p>
         <blockquote class="about-highlight reveal rd3">"From concept to final walkthrough, DGO Green made the entire process easy. Our yard looks better than we ever thought possible." — Maria T., Everett</blockquote>
         <div class="pillars reveal rd4">
-          <div class="pillar"><div class="pillar-num">01</div><div><div class="pillar-title">Expert Execution</div><p class="pillar-body">Specialized experience in both landscaping and hardscaping. Every job gets our full attention, start to finish.</p></div></div>
+          <div class="pillar"><div class="pillar-num">01</div><div><div class="pillar-title">Expert Execution</div><p class="pillar-body">Specialized experience in landscaping and hardscaping. Every job gets our full attention, start to finish.</p></div></div>
           <div class="pillar"><div class="pillar-num">02</div><div><div class="pillar-title">Collaborative Approach</div><p class="pillar-body">We work closely with you to understand your vision before a single shovel goes in the ground.</p></div></div>
-          <div class="pillar"><div class="pillar-num">03</div><div><div class="pillar-title">Local Roots</div><p class="pillar-body">Proudly serving Snohomish County. We're invested in the communities we work in.</p></div></div>
+          <div class="pillar"><div class="pillar-num">03</div><div><div class="pillar-title">Local Roots</div><p class="pillar-body">Proudly serving Snohomish County. Invested in the communities we work in.</p></div></div>
         </div>
-        <div style="margin-top:2rem" class="reveal">
+        <div style="margin-top:1.8rem" class="reveal">
           <a href="#contact" class="btn btn-gold">Start Your Project</a>
         </div>
       </div>
@@ -1568,7 +774,7 @@ footer .btn { border-radius: 0 16px 0 16px !important; }
   </div>
 </section>
 
-<!-- Stats Strip -->
+<!-- STATS -->
 <div class="stats-strip">
   <div class="container">
     <div class="stats-grid">
@@ -1580,119 +786,46 @@ footer .btn { border-radius: 0 16px 0 16px !important; }
   </div>
 </div>
 
-<!-- ─── PROCESS ─── -->
-<section class="s-bg-white" id="process">
-  <div class="container">
-    <div class="process-grid">
-      <div>
-        <p class="label reveal" style="margin-bottom:16px;">How It Works</p>
-        <h2 class="s-title reveal rd1" style="font-size:clamp(2.5rem,5vw,5rem);margin-bottom:48px;color:var(--forest);">From First Call to <span style="color:var(--gold-dk)">Final Walkthrough</span></h2>
-        <div class="timeline">
-          <div class="tl-item reveal">
-            <div class="tl-marker"><div class="tl-dot">01</div><div class="tl-line"></div></div>
-            <div class="tl-content"><div class="tl-title">Request Your Estimate</div><p class="tl-body">Fill out the form or give us a call. We'll ask a few questions and schedule a time to come look. No charge, no obligation.</p></div>
-          </div>
-          <div class="tl-item reveal rd1">
-            <div class="tl-marker"><div class="tl-dot">02</div><div class="tl-line"></div></div>
-            <div class="tl-content"><div class="tl-title">We Assess the Job</div><p class="tl-body">We come out, walk the property, and give you an honest assessment. We tell you what needs to be done and what doesn't.</p></div>
-          </div>
-          <div class="tl-item reveal rd2">
-            <div class="tl-marker"><div class="tl-dot">03</div><div class="tl-line"></div></div>
-            <div class="tl-content"><div class="tl-title">Review Your Quote</div><p class="tl-body">Within 48 hours you'll have a detailed written quote with clear scope. No inflated material costs, no surprise fees.</p></div>
-          </div>
-          <div class="tl-item reveal rd3">
-            <div class="tl-marker"><div class="tl-dot">04</div><div class="tl-line"></div></div>
-            <div class="tl-content"><div class="tl-title">We Do the Work</div><p class="tl-body">Our crew shows up on time, works clean, and keeps you in the loop throughout. Your property stays livable every day.</p></div>
-          </div>
-          <div class="tl-item reveal rd4">
-            <div class="tl-marker"><div class="tl-dot">05</div></div>
-            <div class="tl-content"><div class="tl-title">Final Walkthrough</div><p class="tl-body">We walk through everything with you before packing up. If something isn't right, we fix it. That's the deal.</p></div>
-          </div>
-        </div>
-      </div>
-      <div class="why-panel reveal rd2">
-        <div class="why-title">Why Homeowners Choose DGO Green</div>
-        <div class="why-list">
-          <div class="why-item"><div class="why-check">✓</div><div><div class="why-item-title">We Show Up On Time</div><p>No "between 8 and 5." We give you a time and we stick to it.</p></div></div>
-          <div class="why-item"><div class="why-check">✓</div><div><div class="why-item-title">Transparent Pricing</div><p>Detailed written quotes before any work starts. No hidden fees ever.</p></div></div>
-          <div class="why-item"><div class="why-check">✓</div><div><div class="why-item-title">Clean Worksite Daily</div><p>We pick up every day. Your property stays presentable while we work.</p></div></div>
-          <div class="why-item"><div class="why-check">✓</div><div><div class="why-item-title">Family Business</div><p>You deal directly with the owners, not a call center. Every project matters.</p></div></div>
-          <div class="why-item"><div class="why-check">✓</div><div><div class="why-item-title">Licensed &amp; Insured</div><p>Fully licensed, bonded, and insured in WA State. Certificate available on request.</p></div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── SERVICE AREAS ─── -->
-<section class="s-bg-green" id="areas">
-  <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end;margin-bottom:48px;" class="s-header">
-      <div>
-        <p class="label reveal">Where We Work</p>
-        <h2 class="s-title reveal rd1">Service<br><span class="g">Areas</span></h2>
-      </div>
-      <p class="s-body reveal rd2">Proudly serving Snohomish County and surrounding communities. Don't see your city? Reach out. We likely cover it.</p>
-    </div>
-    <div class="areas-grid">
-      <div class="area-chip reveal"><span class="area-dot"></span><span class="area-name">Everett, WA</span></div>
-      <div class="area-chip reveal rd1"><span class="area-dot"></span><span class="area-name">Mukilteo, WA</span></div>
-      <div class="area-chip reveal rd2"><span class="area-dot"></span><span class="area-name">Bothell, WA</span></div>
-      <div class="area-chip reveal rd3"><span class="area-dot"></span><span class="area-name">Lynnwood, WA</span></div>
-      <div class="area-chip reveal"><span class="area-dot"></span><span class="area-name">Mill Creek, WA</span></div>
-      <div class="area-chip reveal rd1"><span class="area-dot"></span><span class="area-name">Marysville, WA</span></div>
-      <div class="area-chip reveal rd2"><span class="area-dot"></span><span class="area-name">Monroe, WA</span></div>
-      <div class="area-chip reveal rd3"><span class="area-dot"></span><span class="area-name">Lake Stevens, WA</span></div>
-      <div class="area-chip reveal"><span class="area-dot"></span><span class="area-name">Arlington, WA</span></div>
-      <div class="area-chip reveal rd1"><span class="area-dot"></span><span class="area-name">Sultan, WA</span></div>
-      <div class="area-chip reveal rd2"><span class="area-dot"></span><span class="area-name">Bellevue, WA</span></div>
-      <div class="area-chip reveal rd3"><span class="area-dot"></span><span class="area-name">Seattle, WA</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── FAQ ─── -->
+<!-- FAQ -->
 <section class="s-bg-gold-pale" id="faq">
   <div class="container">
     <div class="faq-grid">
       <div>
-        <p class="label reveal" style="margin-bottom:16px;">Got Questions</p>
-        <h2 class="s-title reveal rd1" style="font-size:clamp(2.5rem,5vw,5rem);margin-bottom:18px;color:var(--forest);">FAQ</h2>
-        <p style="font-size:1rem;font-weight:300;color:var(--on-white-muted);line-height:1.8;margin-bottom:2rem;" class="reveal rd2">Straight answers. No runaround. Still have questions? Just reach out.</p>
-        <div class="reveal rd3"><a href="#contact" class="btn btn-gold">Ask Us Anything →</a></div>
+        <p class="label reveal" style="color:var(--gold-dk);margin-bottom:14px;">--Got Questions</p>
+        <h2 class="s-title reveal rd1" style="color:var(--forest);margin-bottom:16px;">FAQ</h2>
+        <p style="font-size:0.97rem;font-weight:300;color:#5a7a6a;line-height:1.8;margin-bottom:2rem;" class="reveal rd2">Straight answers. Still have questions? Just reach out.</p>
+        <div class="reveal rd3"><a href="#contact" class="btn btn-gold">Ask Us Anything</a></div>
       </div>
       <div class="faq-list reveal rd2">
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What services do you offer?<span class="faq-arrow">+</span></button><div class="faq-a">We offer weekly and bi-weekly lawn maintenance, trimming, sod installation, bark installation, plant and tree installation, pressure washing, irrigation setup and repairs, fencing, deck construction, landscape lighting, hardscaping (walkways, patios, driveways), retaining walls, and seasonal clean-ups.</div></div>
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How do I get started?<span class="faq-arrow">+</span></button><div class="faq-a">Reach out through our website or give us a call. We'll schedule an initial consultation to walk your property, discuss your goals, and provide honest guidance on what makes sense for your space.</div></div>
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What makes DGO Green different?<span class="faq-arrow">+</span></button><div class="faq-a">We're a family business. You deal directly with the owners, not a call center. We collaborate closely to understand your vision before a single tool comes out, and we stand behind our work. Our goal is to create spaces that exceed your expectations, not just check a box.</div></div>
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How often should I schedule lawn maintenance?<span class="faq-arrow">+</span></button><div class="faq-a">It depends on your property and preferences. We offer weekly and bi-weekly plans to keep your yard sharp year-round. After seeing your property, we'll recommend the cadence that makes the most sense.</div></div>
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How is pricing determined?<span class="faq-arrow">+</span></button><div class="faq-a">Pricing depends on the scope and specific requirements of each project. We provide detailed written estimates after the initial consultation. No hidden fees, no surprises on invoice day.</div></div>
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Are you licensed and insured?<span class="faq-arrow">+</span></button><div class="faq-a">Yes. Fully licensed and insured in WA State. We can provide a certificate of insurance before work starts if needed.</div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What services do you offer?<span class="faq-arrow">+</span></button><div class="faq-a">Weekly and bi-weekly lawn maintenance, trimming, sod installation, bark installation, plant and tree installation, pressure washing, irrigation setup and repairs, fencing, deck construction, landscape lighting, hardscaping (walkways, patios, driveways), retaining walls, and seasonal clean-ups.</div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How do I get started?<span class="faq-arrow">+</span></button><div class="faq-a">Reach out through our site or give us a call. We'll schedule a time to walk the property, discuss your goals, and give you an honest assessment with no obligation.</div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What makes DGO Green different?<span class="faq-arrow">+</span></button><div class="faq-a">We're a family business. You deal directly with the owners, not a call center. We collaborate closely before a single tool comes out, and we stand behind our work. Our goal is to create spaces that exceed expectations, not just check a box.</div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How is pricing determined?<span class="faq-arrow">+</span></button><div class="faq-a">Pricing depends on scope. We provide detailed written estimates after the initial walk-through. No hidden fees, no surprises on invoice day.</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─── CTA BANNER ─── -->
+<!-- CTA -->
 <section class="cta-section">
   <div class="container">
     <div class="cta-inner">
       <div class="reveal">
-        <h2 class="display cta-title">Ready to Create Your<br><span style="color:var(--lime)">Dream Yard?</span></h2>
-        <p class="cta-sub">Don't settle for average. Let's build something exceptional together. Free consultation, no pressure, no obligation.</p>
+        <h2 class="cta-title">Ready to Create Your<br><span style="color:var(--lime)">Dream Yard?</span></h2>
+        <p class="cta-sub">Free consultation, no pressure, no obligation. Let's build something exceptional.</p>
       </div>
       <div class="reveal rd2">
-        <a href="#contact" class="btn btn-gold" style="font-size:0.85rem;padding:18px 36px;">Get a Free Quote →</a>
+        <a href="#contact" class="btn btn-gold" style="font-size:0.84rem;padding:17px 34px;">Get a Free Quote</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─── CONTACT ─── -->
+<!-- CONTACT -->
 <section class="s-bg-white" id="contact">
   <div class="container">
-    <div style="margin-bottom:56px;">
-      <p class="label reveal" style="margin-bottom:16px;">Reach Out</p>
+    <div style="margin-bottom:48px;">
+      <p class="label reveal" style="color:var(--gold-dk);margin-bottom:14px;">--Reach Out</p>
       <h2 class="s-title reveal rd1" style="color:var(--forest);">Get In<br><span style="color:var(--lime-dk)">Touch</span></h2>
     </div>
     <div class="contact-grid">
@@ -1700,14 +833,14 @@ footer .btn { border-radius: 0 16px 0 16px !important; }
         <div class="form-title">Request a Free Estimate</div>
         <form onsubmit="handleForm(event, this)">
           <div class="form-row">
-            <div class="fg"><label>First Name</label><input type="text" placeholder="John" required /></div>
-            <div class="fg"><label>Last Name</label><input type="text" placeholder="Smith" required /></div>
+            <div class="fg-light"><label>First Name</label><input type="text" placeholder="John" required /></div>
+            <div class="fg-light"><label>Last Name</label><input type="text" placeholder="Smith" required /></div>
           </div>
           <div class="form-row">
-            <div class="fg"><label>Phone</label><input type="tel" placeholder="(425) 000-0000" required /></div>
-            <div class="fg"><label>Email</label><input type="email" placeholder="you@email.com" /></div>
+            <div class="fg-light"><label>Phone</label><input type="tel" placeholder="(425) 000-0000" required /></div>
+            <div class="fg-light"><label>Email</label><input type="email" placeholder="you@email.com" /></div>
           </div>
-          <div class="fg form-full">
+          <div class="fg-light form-full">
             <label>Service Needed</label>
             <select required>
               <option value="" disabled selected>Select a service...</option>
@@ -1722,67 +855,42 @@ footer .btn { border-radius: 0 16px 0 16px !important; }
               <option>Not Sure</option>
             </select>
           </div>
-          <div class="fg form-full contact-fg">
+          <div class="fg-light form-full">
             <label>Tell Us About Your Project</label>
             <textarea placeholder="Describe the project, your timeline, any questions..."></textarea>
           </div>
-          <button type="submit" class="btn btn-gold" style="margin-top:4px">Send My Request →</button>
-          <div id="contactSuccess" style="display:none;margin-top:12px;font-family:'Syne',sans-serif;font-size:0.82rem;font-weight:600;color:var(--lime);letter-spacing:0.06em;">Message sent! We'll be in touch same day.</div>
-          <p class="contact-spam-note" style="margin-top:10px;font-size:0.7rem;color:var(--on-white-muted);">No spam. We respond same day.</p>
+          <button type="submit" class="btn btn-gold" style="margin-top:4px;">Send My Request</button>
+          <div id="contactSuccess" style="display:none;margin-top:12px;font-family:'Syne',sans-serif;font-size:0.8rem;font-weight:600;color:var(--lime-dk);letter-spacing:0.06em;">Message sent. We'll be in touch same day.</div>
+          <p style="margin-top:9px;font-size:0.68rem;color:#5a7a6a;">No spam. We respond same day.</p>
         </form>
       </div>
-      <div class="contact-info reveal rd2">
-        <!-- Profile-style contact card -->
+      <div class="reveal rd2">
         <div class="contact-profile-card">
           <div class="cpc-header">
             <div class="cpc-avatar">
               <img src="https://github.com/user-attachments/assets/da443841-6952-4642-9083-924ba550798c" alt="DGO Green" />
             </div>
-            <div class="cpc-status">
-              <span class="cpc-dot"></span>
-              <span>Available for new projects</span>
-            </div>
+            <div class="cpc-status"><span class="cpc-dot"></span><span>Available for new projects</span></div>
           </div>
           <div class="cpc-blocks">
             <div class="cpc-block">
-              <div class="cpc-block-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.37a16 16 0 0 0 5.72 5.72l1.37-1.37a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              </div>
-              <div>
-                <div class="cpc-block-label">Phone</div>
-                <div class="cpc-block-val"><a href="tel:+14254564640">(425) 456-4640</a></div>
-              </div>
+              <div class="cpc-block-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.37a16 16 0 0 0 5.72 5.72l1.37-1.37a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+              <div><div class="cpc-block-label">Phone</div><div class="cpc-block-val"><a href="tel:+14254564640">(425) 456-4640</a></div></div>
             </div>
             <div class="cpc-block">
-              <div class="cpc-block-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              </div>
+              <div class="cpc-block-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
               <div>
                 <div class="cpc-block-label">Service Area</div>
-                <div class="cpc-block-val">Snohomish County &amp; surrounding<br><span style="opacity:0.7;font-size:0.85em">Everett · Bothell · Lynnwood · Mill Creek<br>Marysville · Monroe · Lake Stevens</span></div>
+                <div class="cpc-block-val">Snohomish County &amp; surrounding<br><span style="opacity:0.65;font-size:0.82em">Everett · Bothell · Lynnwood · Mill Creek · Marysville</span></div>
               </div>
             </div>
             <div class="cpc-block">
-              <div class="cpc-block-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              </div>
-              <div>
-                <div class="cpc-block-label">Business Hours</div>
-                <div class="cpc-block-val">Mon–Fri: 7am – 6pm<br>Saturday: 8am – 4pm<br>Sunday: Closed</div>
-              </div>
-            </div>
-            <div class="cpc-block">
-              <div class="cpc-block-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-              </div>
-              <div>
-                <div class="cpc-block-label">Response Time</div>
-                <div class="cpc-block-val">Within 24 hours. Urgent? Call us directly.</div>
-              </div>
+              <div class="cpc-block-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+              <div><div class="cpc-block-label">Business Hours</div><div class="cpc-block-val">Mon–Fri: 7am – 6pm &nbsp;·&nbsp; Sat: 8am – 4pm</div></div>
             </div>
           </div>
           <a href="tel:+14254564640" class="cpc-call-btn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.37a16 16 0 0 0 5.72 5.72l1.37-1.37a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.37a16 16 0 0 0 5.72 5.72l1.37-1.37a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             Call Us Now
           </a>
         </div>
@@ -1791,20 +899,8 @@ footer .btn { border-radius: 0 16px 0 16px !important; }
   </div>
 </section>
 
-<!-- ─── FOOTER ─── -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<!-- FOOTER -->
 <footer>
-  <!-- Map strip -->
-  <div class="footer-map-wrap">
-    <div id="footerMap"></div>
-    <div class="footer-map-pin">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-      Serving Everett, WA &amp; Snohomish County
-    </div>
-  </div>
-
-  <!-- Top CTA strip -->
   <div class="footer-cta-strip">
     <div class="container">
       <div class="footer-cta-inner">
@@ -1813,50 +909,30 @@ footer .btn { border-radius: 0 16px 0 16px !important; }
           <p class="footer-cta-sub">Free estimates. No pressure. Same-day response.</p>
         </div>
         <div class="footer-cta-actions">
-          <a href="tel:+14254564640" class="btn btn-outline-gold" style="font-size:0.75rem;padding:12px 22px;">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.37a16 16 0 0 0 5.72 5.72l1.37-1.37a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:+14254564640" class="btn btn-outline-gold" style="font-size:0.72rem;padding:11px 20px;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.37a16 16 0 0 0 5.72 5.72l1.37-1.37a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             (425) 456-4640
           </a>
-          <a href="#contact" class="btn btn-gold" style="font-size:0.75rem;padding:12px 22px;">Get a Free Quote</a>
+          <a href="#contact" class="btn btn-gold" style="font-size:0.72rem;padding:11px 20px;">Get a Free Quote</a>
         </div>
       </div>
     </div>
   </div>
-
-  <!-- Main footer -->
   <div class="footer-main">
     <div class="container">
       <div class="footer-grid">
-
-        <!-- Brand col -->
-        <div class="footer-brand-col">
-          <div class="footer-logo-img">
-            <img src="https://github.com/user-attachments/assets/da443841-6952-4642-9083-924ba550798c" alt="DGO Green Landscaping" />
-          </div>
-          <p class="footer-desc">Family-owned landscaping and hardscaping serving Snohomish County since 2014. We specialize in hardscaping, fencing, paving, and full-service landscape maintenance.</p>
+        <div>
+          <div class="footer-logo-img"><img src="https://github.com/user-attachments/assets/da443841-6952-4642-9083-924ba550798c" alt="DGO Green" /></div>
+          <p class="footer-desc">Family-owned landscaping and hardscaping serving Snohomish County since 2014. Specializing in hardscaping, fencing, paving, and full-service maintenance.</p>
           <div class="footer-badges">
-            <div class="footer-badge-chip">
-              <span class="footer-badge-stars">★★★★★</span>
-              <span>5-Star Rated</span>
-            </div>
-            <div class="footer-badge-chip">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              <span>Licensed &amp; Insured</span>
-            </div>
-            <div class="footer-badge-chip">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              <span>Since 2014</span>
-            </div>
+            <div class="footer-badge-chip"><span class="footer-badge-stars">★★★★★</span><span>5-Star Rated</span></div>
+            <div class="footer-badge-chip"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Licensed &amp; Insured</span></div>
           </div>
         </div>
-
-        <!-- Services col -->
         <div>
           <div class="footer-col-title">Services</div>
           <ul class="footer-links">
             <li><a href="#services">Hardscaping &amp; Paving</a></li>
-            <li><a href="#services">Fencing &amp; Decks</a></li>
-            <li><a href="#services">Retaining Walls</a></li>
             <li><a href="#services">Landscape Design</a></li>
             <li><a href="#services">Lawn Maintenance</a></li>
             <li><a href="#services">Irrigation Systems</a></li>
@@ -1864,81 +940,46 @@ footer .btn { border-radius: 0 16px 0 16px !important; }
             <li><a href="#services">Landscape Lighting</a></li>
           </ul>
         </div>
-
-        <!-- Navigation col -->
         <div>
           <div class="footer-col-title">Company</div>
           <ul class="footer-links">
             <li><a href="#">Home</a></li>
             <li><a href="#about">About Us</a></li>
-            <li><a href="#process">Our Process</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
-          <div class="footer-col-title" style="margin-top:28px;">Service Areas</div>
-          <ul class="footer-links">
-            <li><a href="#areas">Everett</a></li>
-            <li><a href="#areas">Bothell &amp; Lynnwood</a></li>
-            <li><a href="#areas">Marysville &amp; Monroe</a></li>
-            <li><a href="#areas">Mill Creek &amp; Lake Stevens</a></li>
-            <li><a href="#areas">Mukilteo &amp; Arlington</a></li>
-          </ul>
         </div>
-
-        <!-- Contact col -->
         <div>
           <div class="footer-col-title">Contact</div>
           <ul class="footer-contact-list">
             <li>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.37a16 16 0 0 0 5.72 5.72l1.37-1.37a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.37a16 16 0 0 0 5.72 5.72l1.37-1.37a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
               <a href="tel:+14254564640">(425) 456-4640</a>
             </li>
             <li>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              <span>Everett, WA — Snohomish County</span>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Everett, WA — Snohomish County
             </li>
             <li>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              <span>Mon–Fri: 7am–6pm · Sat: 8am–4pm</span>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Mon–Fri 7am–6pm · Sat 8am–4pm
             </li>
           </ul>
-          <div class="footer-col-title" style="margin-top:24px;">Follow Us</div>
-          <div class="footer-socials">
-            <a href="#" class="footer-social-btn" aria-label="Facebook">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-            </a>
-            <a href="#" class="footer-social-btn" aria-label="Instagram">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-            </a>
-            <a href="#" class="footer-social-btn" aria-label="Google">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-            </a>
-            <a href="#" class="footer-social-btn" aria-label="Yelp">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12.017 24c6.624 0 11.99-5.367 11.99-11.987C24.007 5.367 18.641 0 12.017 0z"/></svg>
-            </a>
-          </div>
         </div>
-
       </div>
     </div>
   </div>
-
-  <!-- Bottom bar -->
   <div class="footer-bottom-bar">
     <div class="container">
       <div class="footer-bottom">
         <p class="footer-copy">&copy; 2025 DGO Green Landscaping LLC. All rights reserved. Snohomish County, WA.</p>
-        <div class="footer-bottom-right">
-          <span class="footer-copy">Licensed &amp; Bonded · WA State</span>
-          <a href="https://jpeg360.com" class="footer-dev" target="_blank" rel="noopener">Built by JPEG360</a>
-        </div>
+        <a href="https://jpeg360.com" class="footer-dev" target="_blank" rel="noopener">Built by JPEG360</a>
       </div>
     </div>
   </div>
 </footer>
 
 <script>
-  // Nav
   const nav = document.getElementById('mainNav');
   const hero = document.getElementById('hero');
   const floatCta = document.getElementById('floatCta');
@@ -1947,62 +988,26 @@ footer .btn { border-radius: 0 16px 0 16px !important; }
     floatCta.classList.toggle('visible', hero.getBoundingClientRect().bottom < 0);
   }, { passive: true });
 
-  // Hamburger
   const ham = document.getElementById('hamburger');
   const drawer = document.getElementById('mobileDrawer');
-  const mclose = document.getElementById('mobileClose');
-  let drawerOpen = false;
+  document.getElementById('mobileClose').addEventListener('click', closeDrawer);
   ham.addEventListener('click', () => {
-    drawerOpen = true; drawer.classList.add('open'); document.body.style.overflow = 'hidden';
+    drawer.classList.add('open'); document.body.style.overflow = 'hidden';
     const sp = ham.querySelectorAll('span');
     sp[0].style.transform = 'rotate(45deg) translate(5px,5px)';
     sp[1].style.opacity = '0';
     sp[2].style.transform = 'rotate(-45deg) translate(5px,-5px)';
   });
-  mclose.addEventListener('click', closeDrawer);
   function closeDrawer() {
     drawer.classList.remove('open'); document.body.style.overflow = '';
-    const sp = ham.querySelectorAll('span');
-    sp.forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+    ham.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
   }
 
-  // Scroll reveal
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
-  }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+  }, { threshold: 0.08, rootMargin: '0px 0px -24px 0px' });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-  // Leaflet map — Everett WA
-  function initMap() {
-    if (!document.getElementById('footerMap')) return;
-    const map = L.map('footerMap', {
-      center: [47.9790, -122.2021],
-      zoom: 12,
-      zoomControl: false,
-      scrollWheelZoom: false,
-      dragging: false,
-      touchZoom: false,
-      doubleClickZoom: false
-    });
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '© OpenStreetMap'
-    }).addTo(map);
-    const greenIcon = L.divIcon({
-      className: '',
-      html: `<div style="width:36px;height:36px;background:#1a3326;border:3px solid #8ecf86;border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 4px 16px rgba(0,0,0,0.4)"></div>`,
-      iconSize: [36, 36],
-      iconAnchor: [18, 36]
-    });
-    L.marker([47.9790, -122.2021], { icon: greenIcon })
-      .addTo(map)
-      .bindPopup('<b style="font-family:sans-serif;color:#1a3326">DGO Green Landscaping</b><br><span style="font-size:12px">Everett, WA — Snohomish County</span>')
-      .openPopup();
-  }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initMap);
-  } else {
-    setTimeout(initMap, 100);
-  }
   function toggleFaq(btn) {
     const item = btn.closest('.faq-item');
     const isOpen = item.classList.contains('open');
@@ -2010,16 +1015,14 @@ footer .btn { border-radius: 0 16px 0 16px !important; }
     if (!isOpen) item.classList.add('open');
   }
 
-  // Forms
   function handleForm(e, form) {
     e.preventDefault();
     const btn = form.querySelector('button[type="submit"]');
     const orig = btn.innerHTML;
     btn.innerHTML = 'Sending...'; btn.disabled = true;
     setTimeout(() => {
-      btn.innerHTML = '✓ Got it — we\'ll be in touch same day.';
+      btn.innerHTML = "✓ Got it — we'll be in touch same day.";
       btn.style.background = 'var(--lime-dk)';
-      // show success if contact form
       const s = document.getElementById('contactSuccess');
       if (s) s.style.display = 'block';
       form.reset();

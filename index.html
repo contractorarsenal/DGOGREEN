@@ -467,9 +467,50 @@ footer { background: #080f0b; border-top: 1px solid var(--border); padding: 52px
 @keyframes pulse-btn { 0%,100%{box-shadow:0 8px 32px rgba(200,160,74,0.4);} 50%{box-shadow:0 8px 48px rgba(200,160,74,0.65);} }
 
 /* REVEAL */
-.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.22,0.61,0.36,1); }
+.reveal { opacity: 1; transform: translateY(0); transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.22,0.61,0.36,1); }
+.reveal.hidden-init { opacity: 0; transform: translateY(24px); }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 .rd1{transition-delay:0.1s;} .rd2{transition-delay:0.2s;} .rd3{transition-delay:0.3s;} .rd4{transition-delay:0.4s;}
+
+/* SUCCESS TOAST */
+.toast {
+  position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%) translateY(120px);
+  z-index: 9000;
+  background: var(--forest);
+  border: 1px solid rgba(142,207,134,0.3);
+  border-left: 4px solid var(--lime);
+  border-radius: 14px;
+  padding: 18px 28px 18px 20px;
+  display: flex; align-items: flex-start; gap: 14px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  min-width: 320px; max-width: 480px;
+  transition: transform 0.45s cubic-bezier(0.22,0.61,0.36,1), opacity 0.45s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+.toast-icon {
+  width: 36px; height: 36px; border-radius: 10px;
+  background: rgba(142,207,134,0.15); border: 1px solid rgba(142,207,134,0.25);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--lime); flex-shrink: 0;
+}
+.toast-content { flex: 1; }
+.toast-title {
+  font-family: 'Syne', sans-serif; font-size: 0.84rem; font-weight: 800;
+  letter-spacing: 0.04em; color: #fff; margin-bottom: 3px;
+}
+.toast-body { font-size: 0.79rem; font-weight: 300; color: rgba(245,240,232,0.6); line-height: 1.5; }
+.toast-close {
+  background: none; border: none; color: rgba(245,240,232,0.3);
+  cursor: pointer; font-size: 1.1rem; line-height: 1; padding: 2px;
+  transition: color 0.2s; flex-shrink: 0;
+}
+.toast-close:hover { color: rgba(245,240,232,0.8); }
 
 /* ── RESPONSIVE ── */
 @media(max-width:1100px) {
@@ -521,6 +562,7 @@ footer { background: #080f0b; border-top: 1px solid var(--border); padding: 52px
   .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
   .faq-q { font-size: 0.83rem; padding: 15px 18px; }
   .s-title { font-size: clamp(2.2rem, 9vw, 3.2rem); }
+  .toast { min-width: calc(100vw - 48px); max-width: calc(100vw - 48px); }
 }
 
 @media(max-width:400px) {
@@ -530,6 +572,18 @@ footer { background: #080f0b; border-top: 1px solid var(--border); padding: 52px
 </style>
 </head>
 <body>
+
+<!-- SUCCESS TOAST -->
+<div class="toast" id="successToast" role="alert" aria-live="polite">
+  <div class="toast-icon">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+  </div>
+  <div class="toast-content">
+    <div class="toast-title">Hey, thanks for reaching out!</div>
+    <div class="toast-body">Your form has been submitted. We will be in contact with you soon.</div>
+  </div>
+  <button class="toast-close" onclick="dismissToast()" aria-label="Dismiss">&times;</button>
+</div>
 
 <!-- Floating CTA -->
 <div class="floating-cta" id="floatCta">
@@ -617,12 +671,15 @@ footer { background: #080f0b; border-top: 1px solid var(--border); padding: 52px
           <p>Same-day response. No pressure, no spam.</p>
         </div>
         <div class="hqc-body">
-          <form id="heroForm" onsubmit="handleForm(event, this)">
-            <div class="fg"><label>Your Name</label><input type="text" placeholder="John Smith" required /></div>
-            <div class="fg"><label>Phone</label><input type="tel" placeholder="(425) 000-0000" required /></div>
+          <form id="heroForm" onsubmit="handleHeroForm(event)">
+            <input type="hidden" name="access_key" value="ad3a83e6-1a7c-46d6-ac86-976ddf1e94ae" />
+            <input type="hidden" name="subject" value="New Free Estimate Request - DGO Green Landscaping" />
+            <input type="hidden" name="from_name" value="DGO Green Website" />
+            <div class="fg"><label>Your Name</label><input type="text" name="name" placeholder="John Smith" required /></div>
+            <div class="fg"><label>Phone</label><input type="tel" name="phone" placeholder="(425) 000-0000" required /></div>
             <div class="fg">
               <label>Service Needed</label>
-              <select required>
+              <select name="service" required>
                 <option value="" disabled selected>Select a service...</option>
                 <option>Landscape Design</option>
                 <option>Lawn Care &amp; Maintenance</option>
@@ -634,9 +691,9 @@ footer { background: #080f0b; border-top: 1px solid var(--border); padding: 52px
                 <option>Other</option>
               </select>
             </div>
-            <div class="fg"><label>City / Zip</label><input type="text" placeholder="Everett, 98201" /></div>
+            <div class="fg"><label>City / Zip</label><input type="text" name="city" placeholder="Everett, 98201" /></div>
             <div class="hqc-submit">
-              <button type="submit" class="btn btn-gold">Send My Request</button>
+              <button type="submit" class="btn btn-gold" id="heroSubmitBtn">Send My Request</button>
             </div>
           </form>
           <p class="hqc-note">Free estimate. No obligation. We call back fast.</p>
@@ -831,18 +888,21 @@ footer { background: #080f0b; border-top: 1px solid var(--border); padding: 52px
     <div class="contact-grid">
       <div class="contact-form-box reveal">
         <div class="form-title">Request a Free Estimate</div>
-        <form onsubmit="handleForm(event, this)">
+        <form id="contactForm" onsubmit="handleContactForm(event)">
+          <input type="hidden" name="access_key" value="ad3a83e6-1a7c-46d6-ac86-976ddf1e94ae" />
+          <input type="hidden" name="subject" value="New Free Estimate Request - DGO Green Landscaping" />
+          <input type="hidden" name="from_name" value="DGO Green Website" />
           <div class="form-row">
-            <div class="fg-light"><label>First Name</label><input type="text" placeholder="John" required /></div>
-            <div class="fg-light"><label>Last Name</label><input type="text" placeholder="Smith" required /></div>
+            <div class="fg-light"><label>First Name</label><input type="text" name="first_name" placeholder="John" required /></div>
+            <div class="fg-light"><label>Last Name</label><input type="text" name="last_name" placeholder="Smith" required /></div>
           </div>
           <div class="form-row">
-            <div class="fg-light"><label>Phone</label><input type="tel" placeholder="(425) 000-0000" required /></div>
-            <div class="fg-light"><label>Email</label><input type="email" placeholder="you@email.com" /></div>
+            <div class="fg-light"><label>Phone</label><input type="tel" name="phone" placeholder="(425) 000-0000" required /></div>
+            <div class="fg-light"><label>Email</label><input type="email" name="email" placeholder="you@email.com" /></div>
           </div>
           <div class="fg-light form-full">
             <label>Service Needed</label>
-            <select required>
+            <select name="service" required>
               <option value="" disabled selected>Select a service...</option>
               <option>Landscape Design</option>
               <option>Lawn Care &amp; Maintenance</option>
@@ -857,10 +917,9 @@ footer { background: #080f0b; border-top: 1px solid var(--border); padding: 52px
           </div>
           <div class="fg-light form-full">
             <label>Tell Us About Your Project</label>
-            <textarea placeholder="Describe the project, your timeline, any questions..."></textarea>
+            <textarea name="message" placeholder="Describe the project, your timeline, any questions..."></textarea>
           </div>
-          <button type="submit" class="btn btn-gold" style="margin-top:4px;">Send My Request</button>
-          <div id="contactSuccess" style="display:none;margin-top:12px;font-family:'Syne',sans-serif;font-size:0.8rem;font-weight:600;color:var(--lime-dk);letter-spacing:0.06em;">Message sent. We'll be in touch same day.</div>
+          <button type="submit" class="btn btn-gold" id="contactSubmitBtn" style="margin-top:4px;">Send My Request</button>
           <p style="margin-top:9px;font-size:0.68rem;color:#5a7a6a;">No spam. We respond same day.</p>
         </form>
       </div>
@@ -973,13 +1032,14 @@ footer { background: #080f0b; border-top: 1px solid var(--border); padding: 52px
     <div class="container">
       <div class="footer-bottom">
         <p class="footer-copy">&copy; 2025 DGO Green Landscaping LLC. All rights reserved. Snohomish County, WA.</p>
-        <a href="https://jpeg360.com" class="footer-dev" target="_blank" rel="noopener">Built by JPEG360</a>
+        <a href="https://contractorarsenal.com" class="footer-dev" target="_blank" rel="noopener">Built by Contractor Arsenal</a>
       </div>
     </div>
   </div>
 </footer>
 
 <script>
+  /* ── NAV / SCROLL ── */
   const nav = document.getElementById('mainNav');
   const hero = document.getElementById('hero');
   const floatCta = document.getElementById('floatCta');
@@ -988,6 +1048,7 @@ footer { background: #080f0b; border-top: 1px solid var(--border); padding: 52px
     floatCta.classList.toggle('visible', hero.getBoundingClientRect().bottom < 0);
   }, { passive: true });
 
+  /* ── MOBILE DRAWER ── */
   const ham = document.getElementById('hamburger');
   const drawer = document.getElementById('mobileDrawer');
   document.getElementById('mobileClose').addEventListener('click', closeDrawer);
@@ -1003,11 +1064,13 @@ footer { background: #080f0b; border-top: 1px solid var(--border); padding: 52px
     ham.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
   }
 
+  /* ── REVEAL ── */
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
   }, { threshold: 0.08, rootMargin: '0px 0px -24px 0px' });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
+  /* ── FAQ ── */
   function toggleFaq(btn) {
     const item = btn.closest('.faq-item');
     const isOpen = item.classList.contains('open');
@@ -1015,22 +1078,75 @@ footer { background: #080f0b; border-top: 1px solid var(--border); padding: 52px
     if (!isOpen) item.classList.add('open');
   }
 
-  function handleForm(e, form) {
+  /* ── TOAST ── */
+  let toastTimer = null;
+  function showToast() {
+    const toast = document.getElementById('successToast');
+    toast.classList.add('show');
+    if (toastTimer) clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => dismissToast(), 7000);
+  }
+  function dismissToast() {
+    document.getElementById('successToast').classList.remove('show');
+    if (toastTimer) { clearTimeout(toastTimer); toastTimer = null; }
+  }
+
+  /* ── WEB3FORMS SUBMIT ── */
+  async function submitToWeb3Forms(formEl) {
+    const data = new FormData(formEl);
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: data
+    });
+    return response.json();
+  }
+
+  /* ── HERO FORM ── */
+  async function handleHeroForm(e) {
     e.preventDefault();
-    const btn = form.querySelector('button[type="submit"]');
-    const orig = btn.innerHTML;
-    btn.innerHTML = 'Sending...'; btn.disabled = true;
-    setTimeout(() => {
-      btn.innerHTML = "✓ Got it — we'll be in touch same day.";
-      btn.style.background = 'var(--lime-dk)';
-      const s = document.getElementById('contactSuccess');
-      if (s) s.style.display = 'block';
-      form.reset();
-      setTimeout(() => {
-        btn.innerHTML = orig; btn.style.background = ''; btn.disabled = false;
-        if (s) s.style.display = 'none';
-      }, 5000);
-    }, 1100);
+    const form = document.getElementById('heroForm');
+    const btn = document.getElementById('heroSubmitBtn');
+    const origText = btn.innerHTML;
+    btn.innerHTML = 'Sending...';
+    btn.disabled = true;
+    try {
+      const result = await submitToWeb3Forms(form);
+      if (result.success) {
+        form.reset();
+        showToast();
+      } else {
+        alert('Something went wrong. Please call us at (425) 456-4640.');
+      }
+    } catch (err) {
+      alert('Something went wrong. Please call us at (425) 456-4640.');
+    } finally {
+      btn.innerHTML = origText;
+      btn.disabled = false;
+    }
+  }
+
+  /* ── CONTACT FORM ── */
+  async function handleContactForm(e) {
+    e.preventDefault();
+    const form = document.getElementById('contactForm');
+    const btn = document.getElementById('contactSubmitBtn');
+    const origText = btn.innerHTML;
+    btn.innerHTML = 'Sending...';
+    btn.disabled = true;
+    try {
+      const result = await submitToWeb3Forms(form);
+      if (result.success) {
+        form.reset();
+        showToast();
+      } else {
+        alert('Something went wrong. Please call us at (425) 456-4640.');
+      }
+    } catch (err) {
+      alert('Something went wrong. Please call us at (425) 456-4640.');
+    } finally {
+      btn.innerHTML = origText;
+      btn.disabled = false;
+    }
   }
 </script>
 </body>

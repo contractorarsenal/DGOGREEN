@@ -204,15 +204,16 @@ nav.scrolled { box-shadow: 0 2px 32px rgba(0,0,0,0.4); }
 .hqc-body { padding: 18px 22px; }
 .fg { display: flex; flex-direction: column; gap: 5px; margin-bottom: 10px; }
 .fg label { font-family: 'Syne', sans-serif; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.32); }
-.fg input, .fg select {
+.fg input, .fg select, .fg textarea {
   background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
   border-radius: 10px; padding: 10px 13px; color: #fff;
   font-family: 'DM Sans', sans-serif; font-size: 0.88rem; width: 100%; outline: none;
   transition: border-color var(--tr); -webkit-appearance: none; appearance: none;
 }
-.fg input::placeholder { color: rgba(255,255,255,0.2); }
-.fg input:focus, .fg select:focus { border-color: var(--lime); box-shadow: 0 0 0 3px rgba(142,207,134,0.1); }
+.fg input::placeholder, .fg textarea::placeholder { color: rgba(255,255,255,0.2); }
+.fg input:focus, .fg select:focus, .fg textarea:focus { border-color: var(--lime); box-shadow: 0 0 0 3px rgba(142,207,134,0.1); }
 .fg select option { background: #1a3326; color: #fff; }
+.fg textarea { resize: vertical; min-height: 72px; }
 .hqc-submit { margin-top: 4px; }
 .hqc-submit .btn { width: 100%; justify-content: center; font-size: 0.78rem; padding: 13px; }
 .hqc-note { text-align: center; margin-top: 8px; font-size: 0.66rem; color: rgba(255,255,255,0.18); }
@@ -664,7 +665,8 @@ footer { background: #080f0b; border-top: 1px solid var(--border); padding: 52px
           </div>
         </div>
       </div>
-      <!-- Quote card -->
+
+      <!-- HERO QUOTE CARD — updated fields -->
       <div class="hero-quote-card">
         <div class="hqc-head">
           <h3>Get Your Free Estimate</h3>
@@ -677,6 +679,7 @@ footer { background: #080f0b; border-top: 1px solid var(--border); padding: 52px
             <input type="hidden" name="from_name" value="DGO Green Website" />
             <div class="fg"><label>Your Name</label><input type="text" name="name" placeholder="John Smith" required /></div>
             <div class="fg"><label>Phone</label><input type="tel" name="phone" placeholder="(425) 000-0000" required /></div>
+            <div class="fg"><label>Email</label><input type="email" name="email" placeholder="you@email.com" /></div>
             <div class="fg">
               <label>Service Needed</label>
               <select name="service" required>
@@ -691,7 +694,7 @@ footer { background: #080f0b; border-top: 1px solid var(--border); padding: 52px
                 <option>Other</option>
               </select>
             </div>
-            <div class="fg"><label>City / Zip</label><input type="text" name="city" placeholder="Everett, 98201" /></div>
+            <div class="fg"><label>Message</label><textarea name="message" placeholder="Tell us about your project..."></textarea></div>
             <div class="hqc-submit">
               <button type="submit" class="btn btn-gold" id="heroSubmitBtn">Send My Request</button>
             </div>
@@ -916,7 +919,7 @@ footer { background: #080f0b; border-top: 1px solid var(--border); padding: 52px
             </select>
           </div>
           <div class="fg-light form-full">
-            <label>Tell Us About Your Project</label>
+            <label>Message</label>
             <textarea name="message" placeholder="Describe the project, your timeline, any questions..."></textarea>
           </div>
           <button type="submit" class="btn btn-gold" id="contactSubmitBtn" style="margin-top:4px;">Send My Request</button>
